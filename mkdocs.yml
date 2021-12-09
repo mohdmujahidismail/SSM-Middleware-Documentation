@@ -1,0 +1,97 @@
+site_name: SSM Middleware Documentation
+
+nav:
+    - Intro:
+        - Introduction: index.md
+        - Getting Started.md
+        - How To Call API/Token Authentication.md
+    - ...
+
+# nav:
+#   - 'Intro' : 
+#         - '<i>Introduction</i>' : 'index.md'
+#         - '<i>Getting Started</i>': 'Documents/GettingStarted/GettingStarted.md'
+#         - '<i>How to call API</i>':  'Documents/How To Call API/Token Authentication/tokenAuthentication.md'
+#   - 'Profile Webservice': 
+#         - '<i>getInfoProfile</i>': 
+#             - 'ROCINFO': 'Documents/Profile Webservice/getInfoProfile/getInfoProfileROC.md'
+#             - 'ROBINFO': 'Documents/Profile Webservice/getInfoProfile/getInfoProfileROB.md'
+#         - '<i>getCompProfile</i>': 'Documents/Profile Webservice/getCompProfile/getCompProfile.md' 
+#         - '<i>getBizProfile</i>': 'Documents/Profile Webservice/getBizProfile/getBizProfile.md'
+#         - '<i>getNewFormatEntityNo.</i>': 'Documents/Profile Webservice/getNewFormatEntityNo/getNewFormatEntityNo.md'
+#         - '<i>getLlpCurrentProfile</i> ': 'Documents/Profile Webservice/getLlpCurrentProfile/getLlpCurrentProfile.md'
+#         - '<i>Sample Report</i>': 
+#             - 'ROB': 'Documents/Profile Webservice/Sample Report/ROB/ReportROB.md'
+#             - 'ROC': 'Documents/Profile Webservice/Sample Report/ROC/ReportROC.md'
+#             - 'LLP': 'Documents/Profile Webservice/Sample Report/LLP/ReportLLP.md'
+#         - '<i>Data Mapping</i>' :
+#             - 'ROB': 'Documents/Profile Webservice/Data Mapping/ROB/DataMappingROB.md'
+#             - 'ROC': 'Documents/Profile Webservice/Data Mapping/ROC/DataMappingROC.md'
+#             - 'LLP': 'Documents/Profile Webservice/Data Mapping/LLP/DataMappingLLP.md'   
+#         - '<i>Execption Handling</i>': 'Documents/Profile Webservice/ErrorMessage/ErrorMessage.md'
+#         - '<i>WSDL File</i>': 'Documents/Profile Webservice/WSDL File/WSDL_File.md'
+#   - 'Data Schema':
+#         - '<i>ROB</i>': 'Documents/Data Schema/DataSchemaROB.md'
+#         - '<i>ROC</i>': 'Documents/Data Schema/DataSchemaROC.md'
+#         - '<i>LLP</i>': 'Documents/Data Schema/DataSchemaLLP.md'  
+
+theme:
+    name: material
+    font:
+        text: Helvetica
+    features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    # - navigation.sections
+    # - toc.integrate
+    - content.code.annotate # 
+    - content.tabs.link
+
+    favicon: img/Icon-01_white-01.png
+    logo: img/Icon-01_white-01.png
+
+    palette: # 
+     - scheme: default
+       accent: yellow
+       toggle:
+        icon: material/eye-outline
+        name: Switch to dark mode 
+     - scheme: slate # 
+       accent: yellow
+       toggle:
+        icon: material/eye
+        name: Switch to light mode
+
+extra_css:
+    - stylesheets/extra.css
+    - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
+
+extra_javascript:
+    - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+
+plugins:
+    - search
+    - awesome-pages:
+        collapse_single_pages: true
+        strict: false
+
+markdown_extensions:
+    - footnotes
+    - toc:
+        permalink: "#"
+    - attr_list
+    - md_in_html
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+            #   format: !!python/name:pymdownx.superfences.fence_code_format
+              format: !!python/name:pymdownx.superfences.fence_div_format
+    - pymdownx.tabbed:
+        alternate_style: true 
