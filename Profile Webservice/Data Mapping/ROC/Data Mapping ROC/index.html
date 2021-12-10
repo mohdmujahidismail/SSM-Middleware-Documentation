@@ -1,0 +1,2870 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../img/Icon-01_white-01.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+    
+    
+      
+        <title>Data Mapping ROC - SSM Middleware Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.a617204b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Helvetica";--md-code-font:""}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-mapping-roc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="SSM Middleware Documentation" class="md-header__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SSM Middleware Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Mapping ROC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        Intro
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Data%20Schema/Data%20Schema%20LLP/" class="md-tabs__link">
+        Data Schema
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../LLP/Data%20Mapping%20LLP/" class="md-tabs__link md-tabs__link--active">
+        Profile Webservice
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="SSM Middleware Documentation" class="md-nav__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    SSM Middleware Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intro" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Getting%20Started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../How%20To%20Call%20API/Token%20Authentication/" class="md-nav__link">
+        Token Authentication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Data Schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Schema" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Schema
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Data%20Schema/Data%20Schema%20LLP/" class="md-nav__link">
+        Data Schema LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Data%20Schema/Data%20Schema%20ROB/" class="md-nav__link">
+        Data Schema ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Data%20Schema/Data%20Schema%20ROC/" class="md-nav__link">
+        Data Schema ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Profile Webservice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Profile Webservice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Profile Webservice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Data Mapping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Mapping" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Data Mapping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LLP/Data%20Mapping%20LLP/" class="md-nav__link">
+        Data Mapping LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROB/Data%20Mapping%20ROB/" class="md-nav__link">
+        Data Mapping ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Data Mapping ROC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Data Mapping ROC
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#company-profile" class="md-nav__link">
+    COMPANY PROFILE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-information-eng" class="md-nav__link">
+    Company information (ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-share-capitaleng" class="md-nav__link">
+    Summary of Share Capital(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directorsofficerseng" class="md-nav__link">
+    Directors/Officers(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shareholdermemberseng" class="md-nav__link">
+    Shareholder/Members(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-chargeseng" class="md-nav__link">
+    Company Charges(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-financial-informationeng" class="md-nav__link">
+    Summary of Financial Information(ENG)
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary of Financial Information(ENG)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-financial-informationbalance-sheet-items" class="md-nav__link">
+    Summary of Financial Information(BALANCE SHEET ITEMS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-financial-informationincome-statement-items" class="md-nav__link">
+    Summary of Financial Information(INCOME STATEMENT ITEMS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Error%20Message/Error%20Message/" class="md-nav__link">
+        Exception Handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Sample Report
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sample Report" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sample Report
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sample%20Report/LLP/Sample%20Report%20LLP/" class="md-nav__link">
+        Sample Report LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sample%20Report/ROB/Sample%20Report%20ROB/" class="md-nav__link">
+        Sample Report ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sample%20Report/ROC/Sample%20Report%20ROC/" class="md-nav__link">
+        Sample Report ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WSDL%20File/WSDL%20File/" class="md-nav__link">
+        WSDL File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getBizProfile/getBizProfile/" class="md-nav__link">
+        getBizProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getCompProfile/getCompProfile/" class="md-nav__link">
+        getCompProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          getInfoProfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="getInfoProfile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          getInfoProfile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getInfoProfile/getInfoProfileROB/" class="md-nav__link">
+        getInfoProfile ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getInfoProfile/getInfoProfileROC/" class="md-nav__link">
+        getInfoProfile ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getLlpCurrentProfile/getLlpCurrentProfile/" class="md-nav__link">
+        getLlpCurrentProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getNewFormatEntityNo/getNewFormatEntityNo/" class="md-nav__link">
+        getNewFormatEntityNo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#company-profile" class="md-nav__link">
+    COMPANY PROFILE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-information-eng" class="md-nav__link">
+    Company information (ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-share-capitaleng" class="md-nav__link">
+    Summary of Share Capital(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directorsofficerseng" class="md-nav__link">
+    Directors/Officers(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shareholdermemberseng" class="md-nav__link">
+    Shareholder/Members(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-chargeseng" class="md-nav__link">
+    Company Charges(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-financial-informationeng" class="md-nav__link">
+    Summary of Financial Information(ENG)
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary of Financial Information(ENG)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-financial-informationbalance-sheet-items" class="md-nav__link">
+    Summary of Financial Information(BALANCE SHEET ITEMS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-financial-informationincome-statement-items" class="md-nav__link">
+    Summary of Financial Information(INCOME STATEMENT ITEMS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="data-mapping-roc">Data Mapping ROC<a class="headerlink" href="#data-mapping-roc" title="Permanent link">#</a></h1>
+<h2 id="company-profile"><strong>COMPANY PROFILE</strong><a class="headerlink" href="#company-profile" title="Permanent link">#</a></h2>
+<h2 id="company-information-eng">Company information (ENG)<a class="headerlink" href="#company-information-eng" title="Permanent link">#</a></h2>
+<p>MAKLUMAT SYARIKAT(Malay)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>Sample Data</th>
+            <th>Remarks</th>
+            <th>Webservice</th>
+            <th>json Node / Parameter</th>
+            <th>Object Name</th>
+            <th>Sdn Bhd</th>
+            <th>CLBG</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Company Name</td>
+            <td>Nama Syarikat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>companyName</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Last Old Name</td>
+            <td>Nama Syarikat Lama</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>companyOldName</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Date of Change</td>
+            <td>Tarikh Pertukaran</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>dateOfChange</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Registration No.</td>
+            <td>No. Pendaftaran</td>
+            <td>&nbsp;</td>
+            <td>201101006232(934369-T)</td>
+            <td>GetCompProfile</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>12 digit new ?</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>201101006232</td>
+            <td>GetNewFormatEntityNo</td>
+            <td>NewFormatNo</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Company Number</td>
+            <td>No Syarikat</td>
+            <td>&nbsp;</td>
+            <td>should show e.g :84984-H</td>
+            <td>GetCompProfile</td>
+            <td>companyNo-checkDigit</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>T</td>
+            <td>GetCompProfile</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Incorporation Date</td>
+            <td>Tarikh Penubuhan</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>incorpDate</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Registration Date</td>
+            <td>Tarikh Pendaftaran</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>registrationDate</td>
+            <td>rocCompanyInfo</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>Jenis</td>
+            <td><b>English</b>
+                <br> B - LIMITED BY SHARE AND GUARANTEE,
+                <br> G - LIMITED BY GUARANTEE
+                <br> S - LIMITED BY SHARES
+                <br> U - UNLIMITED
+                <br> <b>Malay</b>
+                <br> B - BERHAD MENURUT SAHAM DAN JAMINAN,
+                <br> G - BERHAD MENURUT JAMINAN
+                <br> S - BERHAD MENURUT SYER
+                <br> U - TIDAK TERHAD</td>
+            <td>Base from pdf template : column type is combination of<br><b>Type</b><br>:companyType<br> :companyStatus</td>
+            <td>GetCompProfile</td>
+            <td>companyType</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>Jenis</td>
+            <td>R-Private Limited (eng);Syarikat Persendirian(Malay)
+                <br> U-Public Limited(eng);Syarikat Awam(Malay)</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>companyStatus</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>Status</td>
+            <td>B - DISSOLVED CONVERSION TO LLP
+                <br> C - CEASED BUSINESS
+                <br> D - DISSOLVED
+                <br> E - EXISTING
+                <br> R - REMOVED
+                <br> W - WINDING UP
+                <br> X - NULL AND VOID BY COURT ORDER
+                <br> Y - STRUCK-OFF & WINDING-UP VIA COURT ORDER</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>statusOfCompany</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>LLP NAME</td>
+            <td>NAMA PLT</td>
+            <td>&nbsp;</td>
+            <td>* need to view if status is Dissolved- Conversion to LLP</td>
+            <td>GetCompProfile</td>
+            <td>llpName</td>
+            <td>rocCompanyInfo</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>LLP NUMBER</td>
+            <td>NOMBOR PLT</td>
+            <td>&nbsp;</td>
+            <td>* need to view if status is Dissolved- Conversion to LLP</td>
+            <td>GetCompProfile</td>
+            <td>llpNo</td>
+            <td>rocCompanyInfo</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>CONVERSION DATE</td>
+            <td>TARIKH PERTUKARAN</td>
+            <td>&nbsp;</td>
+            <td>* need to view if status is Dissolved- Conversion to LLP</td>
+            <td>GetCompProfile</td>
+            <td>llpconvertDate</td>
+            <td>rocCompanyInfo</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Registered Address</td>
+            <td>Alamat daftar</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>address1</td>
+            <td>rocRegAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>address2</td>
+            <td>rocRegAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>address3</td>
+            <td>rocRegAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>town</td>
+            <td>rocRegAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>state</td>
+            <td>rocRegAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Postcode</td>
+            <td>Poskod</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>postcode</td>
+            <td>rocRegAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Origin</td>
+            <td>Tempat Penubuhan</td>
+            <td>MAL- Malaysia</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>companyCountry</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Business Address</td>
+            <td>Alamat Perniagaan</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>address1</td>
+            <td>rocBusinessAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>address2</td>
+            <td>rocBusinessAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>address3</td>
+            <td>rocBusinessAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>town</td>
+            <td>rocBusinessAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>state</td>
+            <td>rocBusinessAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Postcode</td>
+            <td>Poskod</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>postcode</td>
+            <td>rocBusinessAddressInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Nature of Business</td>
+            <td>Jenis Perniagaan</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>businessDescription</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="summary-of-share-capitaleng">Summary of Share Capital(ENG)<a class="headerlink" href="#summary-of-share-capitaleng" title="Permanent link">#</a></h2>
+<p>Maklumat Modal(MALAY)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>Sample Data</th>
+            <th>Remarks</th>
+            <th>&nbsp;</th>
+            <th>json Node</th>
+            <th>Object Name</th>
+            <th>Sdn Bhd</th>
+            <th>CLBG</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Column Name(English)</td>
+            <td>Column Name(MALAY)</td>
+            <td>Sample Data</td>
+            <td>Remarks</td>
+            <td>&nbsp;</td>
+            <td>json Node</td>
+            <td>Object Name</td>
+            <td>Sdn Bhd</td>
+            <td>CLBG</td>
+            <td>Foreign</td>
+        </tr>
+        <tr>
+            <td>Company Name</td>
+            <td>Nama Syarikat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>companyName</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Registration No.</td>
+            <td>No. Pendaftaran</td>
+            <td>&nbsp;</td>
+            <td>201101006232<br>(934369-T)</td>
+            <td>GetCompProfile</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>12-digit new</td>
+            <td>12-digit baru</td>
+            <td>&nbsp;</td>
+            <td>201101006232</td>
+            <td>GetNewFormatEntityNo</td>
+            <td>NewEntityNo</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Company Number</td>
+            <td>No. Syarikat</td>
+            <td>&nbsp;</td>
+            <td>934369</td>
+            <td>GetCompProfile</td>
+            <td>companyNo</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>T</td>
+            <td>GetCompProfile</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Currency</td>
+            <td>&nbsp;</td>
+            <td>Handle on currency type if foreign company(RM,SGD,USD etc</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>currency</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>TOTAL AUTHORIZED </td>
+            <td>JUMLAH DIBENARKAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>authorisedCapital</td>
+            <td>rocCompanyInfo</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ORDINARY/AMT</td>
+            <td>BIASA/JUMLAH</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>(ordNumberOfShares*ordNominalValue)/100; OR OrdAmountvalue</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ORDINARY/DIVIDED INTO</td>
+            <td>BIASA/BAHAGI KEPADA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>ordNumberOfShares</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ORDINARY/NOMINAL VALUE</td>
+            <td>BIASA/AMAUN NOMINAL (sen)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>ordNominalValue</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>PREFERENCE/AMT</td>
+            <td>PREFEREN/JUMLAH</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>(prefNumberOfShares*prefNominalValue)/100;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>PREFERENCE/DIVIDED INTO</td>
+            <td>PREFEREN/BAHAGI KEPADA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>prefNumberOfShares</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>PREFERENCE/NOMINAL VALUE</td>
+            <td>PREFEREN/AMAUN NOMINAL (sen)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>prefNominalValue</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>OTHERS/AMT</td>
+            <td>LAIN-LAIN/JUMLAH</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>(othNumberOfShares*othNominalValue)/100</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>OTHERS/DIVIDED INTO</td>
+            <td>LAIN-LAIN/BAHAGI KEPADA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>othNumberOfShares</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>OTHERS/NOMINAL VALUE</td>
+            <td>LAIN-LAIN/AMAUN NOMINAL(sen)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>othNominalValue</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>TOTAL ISSUED(RM)</td>
+            <td>JUMLAH DITERBITKAN(RM)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes, but will display 0 if don`t have any value</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>ORDINARY/CASH</td>
+            <td>BIASA/TUNAI</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>ordIssuedCash</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes, but will display 0 if don`t have any value</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>ORDINARY/OTHERWISE THAN CASH</td>
+            <td>BIASA/SELAIN DARI TUNAI</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>ordIssuedNonCash</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes, but will display 0 if don`t have any value</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>ORDINARY/NOMINAL VALUE</td>
+            <td>BIASA/AMAUN NOMINAL (sen)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>ordNominalValue</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>PREFERENCE/CASH</td>
+            <td>PREFEREN/TUNAI</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>prefIssuedCash</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes, but will display 0 if don`t have any value</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>PREFERENCE/OTHERWISE THAN CASH</td>
+            <td>PREFEREN/SELAIN DARI TUNAI</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>prefIssuedNonCash</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes, but will display 0 if don`t have any value</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>PEREFERENCE/NOMINAL VALUE</td>
+            <td>PREFEREN/AMAUN NOMINAL (sen)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>prefIssuedNominal</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>OTHERS/CASH</td>
+            <td>LAIN-LAIN/TUNAI</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>othIssuedCash</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes, but will display 0 if don`t have any value</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>OTHER/OTHERWISE THAN CASH</td>
+            <td>LAIN-LAIN/SELAIN DARI TUNAI</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>othIssuedNonCash</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes, but will display 0 if don`t have any value</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>OTHER/NOMINAL VALUE</td>
+            <td>LAIN-LAIN/AMAUN NOMINAL(sen)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>othNominalValue</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="directorsofficerseng">Directors/Officers(ENG)<a class="headerlink" href="#directorsofficerseng" title="Permanent link">#</a></h2>
+<p>MAKLUMAT PENGARAH DAN PEGAWAI(Malay)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>Sample Data</th>
+            <th>Remarks</th>
+            <th>Webservice</th>
+            <th>json Node</th>
+            <th>Object Name</th>
+            <th>Sdn Bhd</th>
+            <th>CLBG</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Company Name</td>
+            <td>Nama Syarikat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>companyName</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Registration No.</td>
+            <td>No. Pendaftaran</td>
+            <td>&nbsp;</td>
+            <td>201101006232(934369-T)</td>
+            <td>GetCompProfile</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>12-digit new</td>
+            <td>12-digit baru</td>
+            <td>&nbsp;</td>
+            <td>201101006232</td>
+            <td>GetNewFormatEntityNo</td>
+            <td>NewEntityNo</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Company Number</td>
+            <td>No. Syarikat</td>
+            <td>&nbsp;</td>
+            <td>934369</td>
+            <td>GetCompProfile</td>
+            <td>companyNo</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>Angka Uji</td>
+            <td>&nbsp;</td>
+            <td>T</td>
+            <td>GetCompProfile</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Nama </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>name</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>Alamat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>address1</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>address2</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>address3</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>postcode</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>town</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>state</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>IC/PASSPORT</td>
+            <td>KP/Paspot</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>idNo</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Designation</td>
+            <td>Jawatan</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>designationCode</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Date of Appointment</td>
+            <td>Tarikh Lantikan</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>GetCompProfile</td>
+            <td>startDate</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="shareholdermemberseng">Shareholder/Members(ENG)<a class="headerlink" href="#shareholdermemberseng" title="Permanent link">#</a></h2>
+<p>MAKLUMAT PEMEGANG SYER(Malay)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>Sample Data</th>
+            <th>Remarks</th>
+            <th>&nbsp;</th>
+            <th>json Node</th>
+            <th>&nbsp;</th>
+            <th>Sdn Bhd</th>
+            <th>CLBG</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Company Name</td>
+            <td>Nama Syarikat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>companyName</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Registration No.</td>
+            <td>No. Pendaftaran</td>
+            <td>&nbsp;</td>
+            <td>201101006232<br>(934369-T)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>12-digit new ?</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>201101006232</td>
+            <td>GetNewFormatEntityNo</td>
+            <td>NewEntityNo</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Company Number</td>
+            <td>No. Syarikat</td>
+            <td>&nbsp;</td>
+            <td>934369</td>
+            <td>&nbsp;</td>
+            <td>companyNo</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>T</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>IC/PASSPORT/COMPANY NO</td>
+            <td>KP/Paspot/No Syarikat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>idNo</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+        </tr>
+        <tr>
+            <td>NAME/COMPANY NAME</td>
+            <td>Nama/Nama Syarikat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>name</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+        </tr>
+        <tr>
+            <td>total of share</td>
+            <td>Jumlah Syer</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>share</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="company-chargeseng">Company Charges(ENG)<a class="headerlink" href="#company-chargeseng" title="Permanent link">#</a></h2>
+<p>MAKLUMAT GADAIAN(Malay)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>Sample Data</th>
+            <th>Remarks</th>
+            <th>&nbsp;</th>
+            <th>json Node</th>
+            <th>&nbsp;</th>
+            <th>Sdn Bhd</th>
+            <th>CLBG</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Company Name</td>
+            <td>Nama Syarikat</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>companyName</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Registration No.</td>
+            <td>No. Pendaftaran</td>
+            <td>&nbsp;</td>
+            <td>201101006232<br>(934369-T)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>12-digit new ?</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>201101006232</td>
+            <td>GetNewFormatEntityNo</td>
+            <td>NewEntityNo</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Company Number</td>
+            <td>No. Syarikat</td>
+            <td>&nbsp;</td>
+            <td>934369</td>
+            <td>&nbsp;</td>
+            <td>companyNo</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>T</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Charge Number</td>
+            <td>No Gadaian</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>chargeNo</td>
+            <td>&nbsp;</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+        </tr>
+        <tr>
+            <td>Total of charge</td>
+            <td>Jumlah Gadaian</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>chargeAmount</td>
+            <td>&nbsp;</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+        </tr>
+        <tr>
+            <td>Date of Creation</td>
+            <td>Tarikh Wujud</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>chargeCreateDate</td>
+            <td>&nbsp;</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+        </tr>
+        <tr>
+            <td>Name of Chargee</td>
+            <td>Pemegang Gadaian</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>chargeeName</td>
+            <td>&nbsp;</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+        </tr>
+        <tr>
+            <td>Charge Status</td>
+            <td>Status Gadaian</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>chargeStatus</td>
+            <td>&nbsp;</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+            <td>Yes, but will display "No Information" if don`t have any value</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="summary-of-financial-informationeng">Summary of Financial Information(ENG)<a class="headerlink" href="#summary-of-financial-informationeng" title="Permanent link">#</a></h2>
+<p>RINGKASAN PENYATA KEWANGAN(Malay)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>Sample Data</th>
+            <th>Remarks</th>
+            <th>&nbsp;</th>
+            <th>json Node</th>
+            <th>&nbsp;</th>
+            <th>Sdn Bhd</th>
+            <th>CLBG</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Company Name</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>companyName</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Registration No.</td>
+            <td>No. Pendaftaran</td>
+            <td>&nbsp;</td>
+            <td>201101006232(934369-T)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>12-digit new ?</td>
+            <td>12-digit new ?</td>
+            <td>&nbsp;</td>
+            <td>201101006232</td>
+            <td>GetNewFormatEntityNo</td>
+            <td>NewEntityNo</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Company Number</td>
+            <td>No. Syarikat</td>
+            <td>&nbsp;</td>
+            <td>934369</td>
+            <td>&nbsp;</td>
+            <td>companyNo</td>
+            <td>rocCompanyInfo</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>T</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Auditor</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>auditFirmName</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Auditor Address</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>auditFirmAddress1</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>auditFirmAddress2</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>auditFirmAddress3</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>auditFirmPostcode</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>auditFirmTown</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>auditFirmState</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Exempt Private Company</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>To be determine. Currently just put N/A</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Financial Year End</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>financialYearEndDate</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Unqualified reports</td>
+            <td>&nbsp;</td>
+            <td>Y-unqualified,N-Qualified</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>financialReportType</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Consolidated accounts</td>
+            <td>&nbsp;</td>
+            <td>N-not consolidated,Y-Consolidated</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>accrualAccount</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Date of Tabling</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>dateOfTabling</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="summary-of-financial-informationbalance-sheet-items">Summary of Financial Information(BALANCE SHEET ITEMS)<a class="headerlink" href="#summary-of-financial-informationbalance-sheet-items" title="Permanent link">#</a></h3>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>Sample Data</th>
+            <th>Remarks</th>
+            <th>XML node</th>
+            <th>json Node;</th>
+            <th>&nbsp;</th>
+            <th>Sdn Bhd</th>
+            <th>CLBG</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Non-current assets</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>NonCurrentAsset</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Current Assets</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>currentAsset</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Non-current liabilities</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>nonCurrentLiability</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Current liabilities</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>liability</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Share Capital</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for local company</td>
+            <td>&nbsp;</td>
+            <td>paidUpCapital</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Reserve</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for local company</td>
+            <td>&nbsp;</td>
+            <td>Reserve</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Retain Earning</td>
+            <td>* Tiada parameter</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>InappropriateProfit</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Minority Interest</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for local company</td>
+            <td>&nbsp;</td>
+            <td>minorityInterest</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Fund and Reserve</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for CLBG company</td>
+            <td>&nbsp;</td>
+            <td>fundAndReserve</td>
+            <td>&nbsp;</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Head office Account</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for foreign company</td>
+            <td>&nbsp;</td>
+            <td>headOfficeAccount</td>
+            <td>&nbsp;</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="summary-of-financial-informationincome-statement-items">Summary of Financial Information(INCOME STATEMENT ITEMS)<a class="headerlink" href="#summary-of-financial-informationincome-statement-items" title="Permanent link">#</a></h3>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>Sample Data</th>
+            <th>Remarks</th>
+            <th>&nbsp;</th>
+            <th>json Node;</th>
+            <th>&nbsp;</th>
+            <th>Sdn Bhd</th>
+            <th>CLBG</th>
+            <th>Foreign</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Total Income</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>totalIncome</td>
+            <td>&nbsp;</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Total Expenditure</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>TotalRevenue</td>
+            <td>&nbsp;</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Revenue</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for local company & foreign company</td>
+            <td>&nbsp;</td>
+            <td>revenue</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Profit/(loss) before tax</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for local company & foreign company</td>
+            <td>&nbsp;</td>
+            <td>profitBeforeTax</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Profit/(loss) after tax</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for local company & foreign company</td>
+            <td>&nbsp;</td>
+            <td>profitAfterTax</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Net dividen</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for local company</td>
+            <td>&nbsp;</td>
+            <td>netDividend</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Minority Interest</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for local company</td>
+            <td>&nbsp;</td>
+            <td>minorityInterest</td>
+            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Surplus/(Deficit) before tax</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for CLBG company</td>
+            <td>&nbsp;</td>
+            <td>surplusBeforeTax</td>
+            <td>&nbsp;</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Surplus/(Deficit) after tax</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for CLBG company</td>
+            <td>&nbsp;</td>
+            <td>surplusAfterTax</td>
+            <td>&nbsp;</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Unappropriated Profit B/Forward</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>*view for CLBG company </td>
+            <td>&nbsp;</td>
+            <td>inappropriateProfitBf</td>
+            <td>&nbsp;</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Stamp</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>For document with ctc</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CTC QR Code</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>User ID</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Printing Date with Time (Center)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Printing Date (Right Side)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Printing Date with Time (Bottom)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <iframe width="880" height="664" frameborder="0" scrolling="no" src="https://ssmmy.sharepoint.com/sites/UnitPembekalanData/_layouts/15/Doc.aspx?sourcedoc={0d607c4b-c44c-403b-a205-32b6a21ad5b5}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe> -->
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../ROB/Data%20Mapping%20ROB/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Mapping ROB" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Data Mapping ROB
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../Error%20Message/Error%20Message/" class="md-footer__link md-footer__link--next" aria-label="Next: Exception Handling" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Exception Handling
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.annotate", "content.tabs.link"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

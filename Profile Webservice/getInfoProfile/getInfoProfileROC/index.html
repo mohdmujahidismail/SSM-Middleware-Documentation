@@ -1,0 +1,2236 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../img/Icon-01_white-01.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+    
+    
+      
+        <title>getInfoProfile ROC - SSM Middleware Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a617204b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Helvetica";--md-code-font:""}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getinfoprofile-roc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SSM Middleware Documentation" class="md-header__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SSM Middleware Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              getInfoProfile ROC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        Intro
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Data%20Schema/Data%20Schema%20LLP/" class="md-tabs__link">
+        Data Schema
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Data%20Mapping/LLP/Data%20Mapping%20LLP/" class="md-tabs__link md-tabs__link--active">
+        Profile Webservice
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SSM Middleware Documentation" class="md-nav__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    SSM Middleware Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intro" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Getting%20Started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../How%20To%20Call%20API/Token%20Authentication/" class="md-nav__link">
+        Token Authentication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Data Schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Schema" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Schema
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Data%20Schema/Data%20Schema%20LLP/" class="md-nav__link">
+        Data Schema LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Data%20Schema/Data%20Schema%20ROB/" class="md-nav__link">
+        Data Schema ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Data%20Schema/Data%20Schema%20ROC/" class="md-nav__link">
+        Data Schema ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Profile Webservice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Profile Webservice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Profile Webservice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Data Mapping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Mapping" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Data Mapping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Mapping/LLP/Data%20Mapping%20LLP/" class="md-nav__link">
+        Data Mapping LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Mapping/ROB/Data%20Mapping%20ROB/" class="md-nav__link">
+        Data Mapping ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Mapping/ROC/Data%20Mapping%20ROC/" class="md-nav__link">
+        Data Mapping ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Error%20Message/Error%20Message/" class="md-nav__link">
+        Exception Handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Sample Report
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sample Report" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sample Report
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sample%20Report/LLP/Sample%20Report%20LLP/" class="md-nav__link">
+        Sample Report LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sample%20Report/ROB/Sample%20Report%20ROB/" class="md-nav__link">
+        Sample Report ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sample%20Report/ROC/Sample%20Report%20ROC/" class="md-nav__link">
+        Sample Report ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WSDL%20File/WSDL%20File/" class="md-nav__link">
+        WSDL File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getBizProfile/getBizProfile/" class="md-nav__link">
+        getBizProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getCompProfile/getCompProfile/" class="md-nav__link">
+        getCompProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          getInfoProfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="getInfoProfile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          getInfoProfile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getInfoProfileROB/" class="md-nav__link">
+        getInfoProfile ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          getInfoProfile ROC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        getInfoProfile ROC
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roc-request-respond-data-mapping-and-issues" class="md-nav__link">
+    ROC Request Respond, Data Mapping, and Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-write-message-request" class="md-nav__link">
+    How to write message request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-message-request-respond" class="md-nav__link">
+    Good Message Request &amp; Respond
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getLlpCurrentProfile/getLlpCurrentProfile/" class="md-nav__link">
+        getLlpCurrentProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getNewFormatEntityNo/getNewFormatEntityNo/" class="md-nav__link">
+        getNewFormatEntityNo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roc-request-respond-data-mapping-and-issues" class="md-nav__link">
+    ROC Request Respond, Data Mapping, and Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-write-message-request" class="md-nav__link">
+    How to write message request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-message-request-respond" class="md-nav__link">
+    Good Message Request &amp; Respond
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="getinfoprofile-roc">getInfoProfile ROC<a class="headerlink" href="#getinfoprofile-roc" title="Permanent link">#</a></h1>
+<h2 id="roc-request-respond-data-mapping-and-issues">ROC Request Respond, Data Mapping, and Issues<a class="headerlink" href="#roc-request-respond-data-mapping-and-issues" title="Permanent link">#</a></h2>
+<h2 id="how-to-write-message-request">How to write message request<a class="headerlink" href="#how-to-write-message-request" title="Permanent link">#</a></h2>
+<p>Mandatory field must be filled as explained below: 
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;customerId&gt;</span>your agent code<span class="nt">&lt;/customerId&gt;</span>
+</code></pre></div>
+Please put your agent code. </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;customerReferenceNo&gt;</span>TESTING02<span class="nt">&lt;/customerReferenceNo&gt;</span>
+</code></pre></div>
+<h2 id="good-message-request-respond">Good Message Request &amp; Respond<a class="headerlink" href="#good-message-request-respond" title="Permanent link">#</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Good Message Request</label><label for="__tabbed_1_2">Good Message Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>     <span class="nt">&lt;soapenv:Envelope</span> <span class="na">xmlns:soapenv=</span><span class="s">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> <span class="na">xmlns:ws=</span><span class="s">&quot;http://integrasistg.ssm.com.my/InfoService/1/WS&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;soapenv:Header/&gt;</span>
+        <span class="nt">&lt;soapenv:Body&gt;</span>
+           <span class="nt">&lt;ws:getInfoProfile&gt;</span>
+              <span class="c">&lt;!--Optional:--&gt;</span>
+              <span class="nt">&lt;header&gt;</span>
+                 <span class="c">&lt;!--Optional:--&gt;</span>
+                 <span class="nt">&lt;customerId&gt;</span>MBDD<span class="nt">&lt;/customerId&gt;</span>
+                 <span class="c">&lt;!--Optional:--&gt;</span>
+                 <span class="nt">&lt;customerReferenceNo&gt;</span>Testing02<span class="nt">&lt;/customerReferenceNo&gt;</span>
+                 <span class="c">&lt;!--Optional:--&gt;</span>
+                 <span class="nt">&lt;customerRequestDate&gt;&lt;/customerRequestDate&gt;</span>
+              <span class="nt">&lt;/header&gt;</span>
+              <span class="c">&lt;!--Optional:--&gt;</span>
+              <span class="nt">&lt;request&gt;</span>
+                 <span class="c">&lt;!--Optional:--&gt;</span>
+                 <span class="nt">&lt;supplyInfoReq&gt;</span>
+                    <span class="c">&lt;!--Optional:--&gt;</span>
+                    <span class="nt">&lt;checkDigit&gt;&lt;/checkDigit&gt;</span>
+                    <span class="nt">&lt;gstAmount&gt;&lt;/gstAmount&gt;</span>
+                    <span class="nt">&lt;infoAmount&gt;&lt;/infoAmount&gt;</span>
+                    <span class="c">&lt;!--Optional:--&gt;</span>
+                    <span class="nt">&lt;invoiceNo&gt;&lt;/invoiceNo&gt;</span>
+                    <span class="c">&lt;!--Optional:--&gt;</span>
+                    <span class="nt">&lt;ipaddress&gt;&lt;/ipaddress&gt;</span>
+                    <span class="c">&lt;!--Optional:--&gt;</span>
+                    <span class="nt">&lt;lastUpdateDate&gt;&lt;/lastUpdateDate&gt;</span>
+                    <span class="c">&lt;!--Optional:--&gt;</span>
+                    <span class="nt">&lt;regNo&gt;</span>6386<span class="nt">&lt;/regNo&gt;</span>
+                    <span class="c">&lt;!--Optional:--&gt;</span>
+                    <span class="nt">&lt;remark&gt;&lt;/remark&gt;</span>
+                    <span class="c">&lt;!--Optional:--&gt;</span>
+                    <span class="nt">&lt;tableId&gt;</span>ROCINFO<span class="nt">&lt;/tableId&gt;</span>
+                    <span class="c">&lt;!--Optional:--&gt;</span>
+                    <span class="nt">&lt;type&gt;</span>INFOPROFILE<span class="nt">&lt;/type&gt;</span>
+                 <span class="nt">&lt;/supplyInfoReq&gt;</span>
+              <span class="nt">&lt;/request&gt;</span>
+           <span class="nt">&lt;/ws:getInfoProfile&gt;</span>
+        <span class="nt">&lt;/soapenv:Body&gt;</span>
+     <span class="nt">&lt;/soapenv:Envelope&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>     <span class="nt">&lt;soapenv:Envelope</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span> <span class="na">xmlns:soapenv=</span><span class="s">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;soapenv:Header/&gt;</span>
+        <span class="nt">&lt;soapenv:Body&gt;</span>
+           <span class="nt">&lt;inf:getInfoProfileResponse</span> <span class="na">xmlns:inf=</span><span class="s">&quot;http://integrasistg.ssm.com.my/InfoService/1/WS&quot;</span> <span class="na">xmlns:soapenc=</span><span class="s">&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;header&gt;</span>
+                 <span class="nt">&lt;customerId&gt;</span>MBDD<span class="nt">&lt;/customerId&gt;</span>
+                 <span class="nt">&lt;customerReferenceNo&gt;</span>Testing02<span class="nt">&lt;/customerReferenceNo&gt;</span>
+                 <span class="nt">&lt;customerRequestDate/&gt;</span>
+                 <span class="nt">&lt;errorCode/&gt;</span>
+                 <span class="nt">&lt;errorMessage/&gt;</span>
+                 <span class="nt">&lt;hostErrorCode/&gt;</span>
+                 <span class="nt">&lt;hostErrorMessage/&gt;</span>
+                 <span class="nt">&lt;requestTimestamp&gt;</span>2021-11-25T14:40:26.291<span class="nt">&lt;/requestTimestamp&gt;</span>
+                 <span class="nt">&lt;responseTimestamp&gt;</span>2021-11-25T14:40:26.894<span class="nt">&lt;/responseTimestamp&gt;</span>
+              <span class="nt">&lt;/header&gt;</span>
+              <span class="nt">&lt;request&gt;</span>
+                 <span class="nt">&lt;supplyInfoReq&gt;</span>
+                    <span class="nt">&lt;checkDigit/&gt;</span>
+                    <span class="nt">&lt;gstAmount/&gt;</span>
+                    <span class="nt">&lt;infoAmount/&gt;</span>
+                    <span class="nt">&lt;invoiceNo/&gt;</span>
+                    <span class="nt">&lt;ipaddress/&gt;</span>
+                    <span class="nt">&lt;regNo&gt;</span>6386<span class="nt">&lt;/regNo&gt;</span>
+                    <span class="nt">&lt;remark/&gt;</span>
+                    <span class="nt">&lt;tableId&gt;</span>ROCINFO<span class="nt">&lt;/tableId&gt;</span>
+                    <span class="nt">&lt;type&gt;</span>INFOPROFILE<span class="nt">&lt;/type&gt;</span>
+                 <span class="nt">&lt;/supplyInfoReq&gt;</span>
+              <span class="nt">&lt;/request&gt;</span>
+              <span class="nt">&lt;response&gt;</span>
+                 <span class="nt">&lt;getInfoProfileReturn</span> <span class="na">xsi:type=</span><span class="s">&quot;inf:companyInfoProfile&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;errorMsg/&gt;</span>
+                    <span class="nt">&lt;infoId&gt;</span>15961<span class="nt">&lt;/infoId&gt;</span>
+                    <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                    <span class="nt">&lt;rocBalanceSheetInfo/&gt;</span>
+                    <span class="nt">&lt;rocBalanceSheetListInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;rocBalanceSheetInfos&gt;</span>
+                          <span class="nt">&lt;rocBalanceSheetInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccType&gt;</span>N<span class="nt">&lt;/accrualAccType&gt;</span>
+                             <span class="nt">&lt;auditFirmAddress1&gt;</span>12TH FLOOR, WISMA TUN SAMBANTHAN<span class="nt">&lt;/auditFirmAddress1&gt;</span>
+                             <span class="nt">&lt;auditFirmAddress2&gt;</span>NO. 2, JALAN SULTAN SULAIMAN<span class="nt">&lt;/auditFirmAddress2&gt;</span>
+                             <span class="nt">&lt;auditFirmAddress3/&gt;</span>
+                             <span class="nt">&lt;auditFirmName&gt;</span>FOLKS DFK <span class="ni">&amp;amp;</span> CO<span class="nt">&lt;/auditFirmName&gt;</span>
+                             <span class="nt">&lt;auditFirmNo&gt;</span>AF0502<span class="nt">&lt;/auditFirmNo&gt;</span>
+                             <span class="nt">&lt;auditFirmPostcode&gt;</span>50000<span class="nt">&lt;/auditFirmPostcode&gt;</span>
+                             <span class="nt">&lt;auditFirmState&gt;</span>W<span class="nt">&lt;/auditFirmState&gt;</span>
+                             <span class="nt">&lt;auditFirmTown&gt;</span>KUALA LUMPUR<span class="nt">&lt;/auditFirmTown&gt;</span>
+                             <span class="nt">&lt;auditfirmFlag/&gt;</span>
+                             <span class="nt">&lt;branchkeycode&gt;</span>0<span class="nt">&lt;/branchkeycode&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;contigentLiability&gt;</span>0.00<span class="nt">&lt;/contigentLiability&gt;</span>
+                             <span class="nt">&lt;currentAsset&gt;</span>538731135.00<span class="nt">&lt;/currentAsset&gt;</span>
+                             <span class="nt">&lt;dateOfTabling&gt;</span>2005-09-21T16:00:00.000Z<span class="nt">&lt;/dateOfTabling&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2005-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;fixedAsset&gt;</span>134392783.00<span class="nt">&lt;/fixedAsset&gt;</span>
+                             <span class="nt">&lt;fundAndReserve&gt;</span>0.00<span class="nt">&lt;/fundAndReserve&gt;</span>
+                             <span class="nt">&lt;fundReserve&gt;</span>0.00<span class="nt">&lt;/fundReserve&gt;</span>
+                             <span class="nt">&lt;headOfficeAccount&gt;</span>0.00<span class="nt">&lt;/headOfficeAccount&gt;</span>
+                             <span class="nt">&lt;inappropriateProfit&gt;</span>75918000.00<span class="nt">&lt;/inappropriateProfit&gt;</span>
+                             <span class="nt">&lt;liability&gt;</span>421559517.00<span class="nt">&lt;/liability&gt;</span>
+                             <span class="nt">&lt;longTermLiability&gt;</span>89321468.00<span class="nt">&lt;/longTermLiability&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-22256822.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;nonCurrAsset&gt;</span>486421730.00<span class="nt">&lt;/nonCurrAsset&gt;</span>
+                             <span class="nt">&lt;nonCurrentLiability&gt;</span>0.00<span class="nt">&lt;/nonCurrentLiability&gt;</span>
+                             <span class="nt">&lt;otherAsset&gt;</span>254409111.00<span class="nt">&lt;/otherAsset&gt;</span>
+                             <span class="nt">&lt;paidUpCapital&gt;</span>401422628.00<span class="nt">&lt;/paidUpCapital&gt;</span>
+                             <span class="nt">&lt;reserves&gt;</span>45824323.00<span class="nt">&lt;/reserves&gt;</span>
+                             <span class="nt">&lt;shareAppAccount&gt;</span>13363751.00<span class="nt">&lt;/shareAppAccount&gt;</span>
+                             <span class="nt">&lt;sharePremium&gt;</span>45824323.00<span class="nt">&lt;/sharePremium&gt;</span>
+                             <span class="nt">&lt;totalInvestment&gt;</span>97619836.00<span class="nt">&lt;/totalInvestment&gt;</span>
+                          <span class="nt">&lt;/rocBalanceSheetInfos&gt;</span>
+                    <span class="nt">&lt;rocBusinessAddressInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;lastUpdateDate&gt;</span>2020-07-15T07:55:28.000Z<span class="nt">&lt;/lastUpdateDate&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;address1&gt;</span>2.01, PJ TOWER<span class="nt">&lt;/address1&gt;</span>
+                       <span class="nt">&lt;address2&gt;</span>18 PERSIARAN BARAT<span class="nt">&lt;/address2&gt;</span>
+                       <span class="nt">&lt;address3/&gt;</span>
+                       <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                       <span class="nt">&lt;postcode&gt;</span>46050<span class="nt">&lt;/postcode&gt;</span>
+                       <span class="nt">&lt;state&gt;</span>B<span class="nt">&lt;/state&gt;</span>
+                       <span class="nt">&lt;town&gt;</span>PETALING JAYA<span class="nt">&lt;/town&gt;</span>
+                    <span class="nt">&lt;/rocBusinessAddressInfo&gt;</span>
+                    <span class="nt">&lt;rocBusinessCodeInfo/&gt;</span>
+                    <span class="nt">&lt;rocBusinessCodeListInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;rocBusinessCodeInfos&gt;</span>
+                          <span class="nt">&lt;rocBusinessCodeInfos&gt;</span>
+                             <span class="nt">&lt;businessCode&gt;</span>64200<span class="nt">&lt;/businessCode&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;priority&gt;</span>1<span class="nt">&lt;/priority&gt;</span>
+                          <span class="nt">&lt;/rocBusinessCodeInfos&gt;</span>
+                          <span class="nt">&lt;rocBusinessCodeInfos&gt;</span>
+                             <span class="nt">&lt;businessCode&gt;</span>64200<span class="nt">&lt;/businessCode&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;priority&gt;</span>1<span class="nt">&lt;/priority&gt;</span>
+                          <span class="nt">&lt;/rocBusinessCodeInfos&gt;</span>
+                          <span class="nt">&lt;rocBusinessCodeInfos&gt;</span>
+                             <span class="nt">&lt;businessCode&gt;</span>66191<span class="nt">&lt;/businessCode&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;priority&gt;</span>1<span class="nt">&lt;/priority&gt;</span>
+                          <span class="nt">&lt;/rocBusinessCodeInfos&gt;</span>
+                       <span class="nt">&lt;/rocBusinessCodeInfos&gt;</span>
+                    <span class="nt">&lt;/rocBusinessCodeListInfo&gt;</span>
+                    <span class="nt">&lt;rocChargesInfo/&gt;</span>
+                    <span class="nt">&lt;rocChargesListInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;rocChargesInfos&gt;</span>
+                          <span class="nt">&lt;rocChargesInfos&gt;</span>
+                             <span class="nt">&lt;ammendNo/&gt;</span>
+                             <span class="nt">&lt;chargeAmount&gt;</span>450000.00<span class="nt">&lt;/chargeAmount&gt;</span>
+                             <span class="nt">&lt;chargeCreateDate&gt;</span>1968-07-15T16:30:00.000Z<span class="nt">&lt;/chargeCreateDate&gt;</span>
+                             <span class="nt">&lt;chargeCreateDate1/&gt;</span>
+                             <span class="nt">&lt;chargeMortgageType&gt;</span>A<span class="nt">&lt;/chargeMortgageType&gt;</span>
+                             <span class="nt">&lt;chargeNo&gt;</span>002<span class="nt">&lt;/chargeNo&gt;</span>
+                             <span class="nt">&lt;chargeStatus&gt;</span>S<span class="nt">&lt;/chargeStatus&gt;</span>
+                             <span class="nt">&lt;chargeeId&gt;</span>THE CHARTERED BANK<span class="nt">&lt;/chargeeId&gt;</span>
+                             <span class="nt">&lt;chargeeName/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;form40Date&gt;</span>1968-08-14T16:30:00.000Z<span class="nt">&lt;/form40Date&gt;</span>
+                             <span class="nt">&lt;totalOfCharge/&gt;</span>
+                          <span class="nt">&lt;/rocChargesInfos&gt;</span>
+                       <span class="nt">&lt;/rocChargesInfos&gt;</span>
+                    <span class="nt">&lt;/rocChargesListInfo&gt;</span>
+                    <span class="nt">&lt;rocCompanyInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;lastUpdateDate&gt;</span>2020-10-15T07:18:28.000Z<span class="nt">&lt;/lastUpdateDate&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;balaceSheetInfo/&gt;</span>
+                       <span class="nt">&lt;balaceSheetInfoDesc/&gt;</span>
+                       <span class="nt">&lt;businessDescription&gt;</span>INVESTMENT HOLDING<span class="nt">&lt;/businessDescription&gt;</span>
+                       <span class="nt">&lt;checkDigit&gt;</span>K<span class="nt">&lt;/checkDigit&gt;</span>
+                       <span class="nt">&lt;companyCountry&gt;</span>MAL<span class="nt">&lt;/companyCountry&gt;</span>
+                       <span class="nt">&lt;companyName&gt;</span>AMCORP PROPERTIES BERHAD<span class="nt">&lt;/companyName&gt;</span>
+                       <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                       <span class="nt">&lt;companyOldName&gt;</span>AMDB BERHAD<span class="nt">&lt;/companyOldName&gt;</span>
+                       <span class="nt">&lt;companyStatus&gt;</span>U<span class="nt">&lt;/companyStatus&gt;</span>
+                       <span class="nt">&lt;companyType&gt;</span>S<span class="nt">&lt;/companyType&gt;</span>
+                       <span class="nt">&lt;currency&gt;</span>RM<span class="nt">&lt;/currency&gt;</span>
+                       <span class="nt">&lt;dateOfChange&gt;</span>2010-09-07T16:00:00.000Z<span class="nt">&lt;/dateOfChange&gt;</span>
+                       <span class="nt">&lt;incomeStatInfo/&gt;</span>
+                       <span class="nt">&lt;incomeStatInfoDesc/&gt;</span>
+                       <span class="nt">&lt;incorpDate&gt;</span>1965-12-28T16:30:00.000Z<span class="nt">&lt;/incorpDate&gt;</span>
+                       <span class="nt">&lt;infoColon/&gt;</span>
+                       <span class="nt">&lt;latestDocUpdateDate&gt;</span>2020-10-15T07:15:10.000Z<span class="nt">&lt;/latestDocUpdateDate&gt;</span>
+                       <span class="nt">&lt;llpInfo/&gt;</span>
+                       <span class="nt">&lt;llpInfoDesc/&gt;</span>
+                       <span class="nt">&lt;llpName/&gt;</span>
+                       <span class="nt">&lt;llpNo/&gt;</span>
+                       <span class="nt">&lt;localforeignCompany&gt;</span>L<span class="nt">&lt;/localforeignCompany&gt;</span>
+                       <span class="nt">&lt;naBal/&gt;</span>
+                       <span class="nt">&lt;naProf/&gt;</span>
+                       <span class="nt">&lt;statusOfCompany&gt;</span>E<span class="nt">&lt;/statusOfCompany&gt;</span>
+                       <span class="nt">&lt;wupType/&gt;</span>
+                    <span class="nt">&lt;/rocCompanyInfo&gt;</span>
+                    <span class="nt">&lt;rocCompanyOfficerInfo/&gt;</span>
+                    <span class="nt">&lt;rocCompanyOfficerListInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>2, JALAN TEBRAU 1<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>UKAY HEIGHTS<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>MALAYSIA<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1966-10-19T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>661020106186<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>SHALINA BINTI AZMAN<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>68000<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2007-07-29T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>B<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>AMPANG<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>A-07-03, SERAI BUKIT BANDARAYA,<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>98 JALAN MEDANG SERAI,<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>BUKIT BANDARAYA, BANGSAR<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1960-11-17T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>601118075627<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>SOO KIM WAI<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>59100<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2007-07-29T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>W<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>KUALA LUMPUR<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>8 CHANGKAT DATUK SULAIMAN 1<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>TTDI HILLS<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>TAMAN TUN DR ISMAIL<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>S<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1970-05-24T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>700525105671<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>YAP CHOON SENG<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>60000<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2007-09-06T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>W<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>KUALA LUMPUR<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>NO.3, JALAN SS19/3C<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2/&gt;</span>
+                             <span class="nt">&lt;address3/&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>S<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1958-08-25T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>580826055408<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>CHUA SIEW CHUAN<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>47500<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2008-04-10T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>B<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>SUBANG JAYA<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>06-06 CASA KIARA 2 CONDO<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>14 JALAN KIARA 5<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>BUKIT KIARA<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1955-05-06T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>550507075279<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>P&#39;NG SOO THENG<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>50480<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2010-05-31T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>W<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>KUALA LUMPUR<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>35, PERSIARAN ZAABA<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>TAMAN TUN DR ISMAIL<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>MALAYSIA<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1950-07-15T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>500716055121<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>TAN BUN POO<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>60000<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2013-05-31T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>W<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>KUALA LUMPUR<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>85,PERSIARAN DEDAP<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>BATIK SIERRAMAS<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3/&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1950-02-02T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>500203075573<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>KAMIL AHMAD MERICAN<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>47000<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2013-07-22T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>B<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>SUNGAI BULOH<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>NO. 12 JALAN AMAN PERDANA 7B/KU5<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>TAMAN AMAN PERDANA<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>MALAYSIA<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>M<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1961-09-07T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>610908085015<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>LEE KEEN PONG<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>41050<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2007-07-29T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>B<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>KLANG<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>2 JALAN TERBAU 1<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>UKAY HEIGHTS<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>MALAYSIA<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>M<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1974-09-23T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>740924145167<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>SHAHMAN BIN AZMAN<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>68000<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2012-02-20T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>B<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>AMPANG<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>71, JALAN SERI BERINGIN 2,<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>SERI BERINGIN,<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>BUKIT DAMANSARA,  MALAYSIA<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1964-11-25T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>641126107533<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>LUM SING FAI<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>50490<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2018-11-12T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>W<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>KUALA LUMPUR<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>47, JALAN MATAHARI,<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>TAMAN WESTPOOL,<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3/&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1967-11-12T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>671113086435<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>TAN EWE SEONG<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>31400<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>A<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>IPOH<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>2.01 PJ TOWER<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>AMCORP TRADE CENTRE<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>18 JALAN PERSIARAN BARAT<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>6386<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>AMCORP PROPERTIES BERHAD SHARE BUY BACK ACCOUNT<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>46050<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;resignDate&gt;</span>2018-12-28T16:00:00.000Z<span class="nt">&lt;/resignDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>B<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>PETALING JAYA<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                          <span class="nt">&lt;rocCompanyOfficerInfos&gt;</span>
+                             <span class="nt">&lt;address1&gt;</span>NO. 18 JALAN BU 3/5<span class="nt">&lt;/address1&gt;</span>
+                             <span class="nt">&lt;address2&gt;</span>BANDAR UTAMA<span class="nt">&lt;/address2&gt;</span>
+                             <span class="nt">&lt;address3&gt;</span>MALAYSIA<span class="nt">&lt;/address3&gt;</span>
+                             <span class="nt">&lt;appointmentDate/&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;designationCode&gt;</span>D<span class="nt">&lt;/designationCode&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1960-08-13T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>600814075191<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>MAZLAN BIN MANSOR<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;officerInfo/&gt;</span>
+                             <span class="nt">&lt;postcode&gt;</span>47800<span class="nt">&lt;/postcode&gt;</span>
+                             <span class="nt">&lt;startDate&gt;</span>2020-09-30T16:00:00.000Z<span class="nt">&lt;/startDate&gt;</span>
+                             <span class="nt">&lt;state&gt;</span>B<span class="nt">&lt;/state&gt;</span>
+                             <span class="nt">&lt;town&gt;</span>PETALING JAYA<span class="nt">&lt;/town&gt;</span>
+                          <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                       <span class="nt">&lt;/rocCompanyOfficerInfos&gt;</span>
+                    <span class="nt">&lt;/rocCompanyOfficerListInfo&gt;</span>
+                    <span class="nt">&lt;rocDocumentLodgeInfo/&gt;</span>
+                    <span class="nt">&lt;rocDocumentLodgeListInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2020-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2019-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2018-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2017-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2016-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2015-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2014-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2013-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2012-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2011-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2010-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2009-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2008-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2007-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2006-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                          <span class="nt">&lt;rocDocumentLodgeInfos&gt;</span>
+                             <span class="nt">&lt;companyNo/&gt;</span>
+                             <span class="nt">&lt;documentDate&gt;</span>2005-03-30T16:00:00.000Z<span class="nt">&lt;/documentDate&gt;</span>
+                             <span class="nt">&lt;formTrx&gt;</span>557<span class="nt">&lt;/formTrx&gt;</span>
+                          <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                       <span class="nt">&lt;/rocDocumentLodgeInfos&gt;</span>
+                    <span class="nt">&lt;/rocDocumentLodgeListInfo&gt;</span>
+                    <span class="nt">&lt;rocProfitLossInfo/&gt;</span>
+                    <span class="nt">&lt;rocProfitLossListInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2006-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>-109237888.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>-287639518.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-32717004.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>0.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>0.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>-145684626.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>-143429305.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>-178401630.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>219612900.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2007-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>-287639518.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>-263383955.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-271821.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>0.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>0.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>24527384.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>19764265.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>24255563.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>284892058.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2008-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>-263383955.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>-277840761.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>3500576.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>0.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>0.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>-3787453.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>-14169929.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>-5858038.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>-10669353.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>425996524.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2010-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>-260162294.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>139583084.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-2260053.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>0.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>356549955.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>35919989.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>18876909.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>33659936.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>240701487.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>9535487.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2012-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>187566000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>276567000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-1692000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>-12894000.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>-81000.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>103668000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>101061000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>101976000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>256831000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2013-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>276567000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>360592000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>104000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>-13538000.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>-114000.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>96692000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>95907000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>96796000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>174048000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>881000.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2014-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>360592000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>519358000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-571000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>-12987000.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>451000.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>171873000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>153730000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>171302000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>170194000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>N<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2015-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>519358000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>488953000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-1197000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>-65905000.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>0.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>36697000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>41198000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>35500000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>173606000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>N<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2016-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>488953000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>551155000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-2390000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>-22749000.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>496000.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>86845000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>90984000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>84455000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>168244000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2017-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>551155000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>529145000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-2195000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>-40683000.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>476000.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>20392000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>32467000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>18197000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>188225000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>N<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2018-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>529145000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>648953000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-2901000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>0.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>-22512000.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>145221000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>175255000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>142320000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>134085000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2019-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>644901000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>645742000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-3519000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>-42767000.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>0.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>47127000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>32937000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>43608000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>147126000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>N<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2005-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>-108781988.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>-109237888.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-5007251.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>0.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>0.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>4551351.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>6446334.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>-455900.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>247744077.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2011-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>138885000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>187566000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-2306000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>0.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>0.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>50987000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>52331000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>48681000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>110111000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>Y<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2009-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>-277840761.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>-260162294.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-772318.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>0.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>0.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>18450785.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>-7430593.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>17678467.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>176494521.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                          <span class="nt">&lt;rocProfitLossInfos&gt;</span>
+                             <span class="nt">&lt;errorMsg/&gt;</span>
+                             <span class="nt">&lt;infoId/&gt;</span>
+                             <span class="nt">&lt;successCode/&gt;</span>
+                             <span class="nt">&lt;accrualAccount&gt;</span>N<span class="nt">&lt;/accrualAccount&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;extraOrdinaryItem&gt;</span>0.00<span class="nt">&lt;/extraOrdinaryItem&gt;</span>
+                             <span class="nt">&lt;financialReportType&gt;</span>Y<span class="nt">&lt;/financialReportType&gt;</span>
+                             <span class="nt">&lt;financialYearEndDate&gt;</span>2020-03-30T16:00:00.000Z<span class="nt">&lt;/financialYearEndDate&gt;</span>
+                             <span class="nt">&lt;grossDividendRate&gt;</span>0.00<span class="nt">&lt;/grossDividendRate&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitBf&gt;</span>645742000.00<span class="nt">&lt;/inappropriateProfitBf&gt;</span>
+                             <span class="nt">&lt;inappropriateProfitCf&gt;</span>611449000.00<span class="nt">&lt;/inappropriateProfitCf&gt;</span>
+                             <span class="nt">&lt;minorityInterest&gt;</span>-1993000.00<span class="nt">&lt;/minorityInterest&gt;</span>
+                             <span class="nt">&lt;netDividend&gt;</span>-36922000.00<span class="nt">&lt;/netDividend&gt;</span>
+                             <span class="nt">&lt;others&gt;</span>154000.00<span class="nt">&lt;/others&gt;</span>
+                             <span class="nt">&lt;priorAdjustment&gt;</span>0.00<span class="nt">&lt;/priorAdjustment&gt;</span>
+                             <span class="nt">&lt;profitAfterTax&gt;</span>4468000.00<span class="nt">&lt;/profitAfterTax&gt;</span>
+                             <span class="nt">&lt;profitBeforeTax&gt;</span>17965000.00<span class="nt">&lt;/profitBeforeTax&gt;</span>
+                             <span class="nt">&lt;profitShareholder&gt;</span>2475000.00<span class="nt">&lt;/profitShareholder&gt;</span>
+                             <span class="nt">&lt;revenue&gt;</span>179533000.00<span class="nt">&lt;/revenue&gt;</span>
+                             <span class="nt">&lt;surplusAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusBeforeTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitAfterTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitAfterTax&gt;</span>
+                             <span class="nt">&lt;surplusDeficitBeforeTax&gt;</span>0.00<span class="nt">&lt;/surplusDeficitBeforeTax&gt;</span>
+                             <span class="nt">&lt;totalExpenditure&gt;</span>0.00<span class="nt">&lt;/totalExpenditure&gt;</span>
+                             <span class="nt">&lt;totalIncome&gt;</span>0.00<span class="nt">&lt;/totalIncome&gt;</span>
+                             <span class="nt">&lt;totalRevenue&gt;</span>0.00<span class="nt">&lt;/totalRevenue&gt;</span>
+                             <span class="nt">&lt;transferred&gt;</span>0.00<span class="nt">&lt;/transferred&gt;</span>
+                             <span class="nt">&lt;turnover&gt;</span>0.00<span class="nt">&lt;/turnover&gt;</span>
+                          <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                       <span class="nt">&lt;/rocProfitLossInfos&gt;</span>
+                    <span class="nt">&lt;/rocProfitLossListInfo&gt;</span>
+                    <span class="nt">&lt;rocRegAddressInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;lastUpdateDate&gt;</span>2009-11-16T11:46:04.000Z<span class="nt">&lt;/lastUpdateDate&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;address1&gt;</span>LEVEL 7, MENARA MILENIUM<span class="nt">&lt;/address1&gt;</span>
+                       <span class="nt">&lt;address2&gt;</span>JALAN DAMANLELA<span class="nt">&lt;/address2&gt;</span>
+                       <span class="nt">&lt;address3&gt;</span>PUSAT BANDAR DAMANSARA, DAMANSARA HEIGHTS<span class="nt">&lt;/address3&gt;</span>
+                       <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                       <span class="nt">&lt;postcode&gt;</span>50490<span class="nt">&lt;/postcode&gt;</span>
+                       <span class="nt">&lt;state&gt;</span>W<span class="nt">&lt;/state&gt;</span>
+                       <span class="nt">&lt;town&gt;</span>KUALA LUMPUR<span class="nt">&lt;/town&gt;</span>
+                    <span class="nt">&lt;/rocRegAddressInfo&gt;</span>
+                    <span class="nt">&lt;rocShareCapitalInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;authorisedCapital&gt;</span>600000000.0000<span class="nt">&lt;/authorisedCapital&gt;</span>
+                       <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                       <span class="nt">&lt;currency&gt;</span>RM<span class="nt">&lt;/currency&gt;</span>
+                       <span class="nt">&lt;currenyNominal&gt;</span>NOMINAL (sen)<span class="nt">&lt;/currenyNominal&gt;</span>
+                       <span class="nt">&lt;ordAIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/ordAIssuedCash&gt;</span>
+                       <span class="nt">&lt;ordAIssuedNominal&gt;</span>0.0000<span class="nt">&lt;/ordAIssuedNominal&gt;</span>
+                       <span class="nt">&lt;ordAIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/ordAIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;ordANominalValue&gt;</span>0.0000<span class="nt">&lt;/ordANominalValue&gt;</span>
+                       <span class="nt">&lt;ordANumberOfShares&gt;</span>0<span class="nt">&lt;/ordANumberOfShares&gt;</span>
+                       <span class="nt">&lt;ordAmountAValue&gt;</span>0.0000<span class="nt">&lt;/ordAmountAValue&gt;</span>
+                       <span class="nt">&lt;ordAmountBValue&gt;</span>0.0000<span class="nt">&lt;/ordAmountBValue&gt;</span>
+                       <span class="nt">&lt;ordAmountValue&gt;</span>450000000.0000<span class="nt">&lt;/ordAmountValue&gt;</span>
+                       <span class="nt">&lt;ordBIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/ordBIssuedCash&gt;</span>
+                       <span class="nt">&lt;ordBIssuedNominal&gt;</span>0.0000<span class="nt">&lt;/ordBIssuedNominal&gt;</span>
+                       <span class="nt">&lt;ordBIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/ordBIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;ordBNominalValue&gt;</span>0.0000<span class="nt">&lt;/ordBNominalValue&gt;</span>
+                       <span class="nt">&lt;ordBNumberOfShares&gt;</span>0<span class="nt">&lt;/ordBNumberOfShares&gt;</span>
+                       <span class="nt">&lt;ordIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>80370883<span class="nt">&lt;/ordIssuedCash&gt;</span>
+                       <span class="nt">&lt;ordIssuedNominal&gt;</span>43.0000<span class="nt">&lt;/ordIssuedNominal&gt;</span>
+                       <span class="nt">&lt;ordIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>652763336<span class="nt">&lt;/ordIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;ordNominalValue&gt;</span>50.0000<span class="nt">&lt;/ordNominalValue&gt;</span>
+                       <span class="nt">&lt;ordNumberOfShares&gt;</span>900000000<span class="nt">&lt;/ordNumberOfShares&gt;</span>
+                       <span class="nt">&lt;othAIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/othAIssuedCash&gt;</span>
+                       <span class="nt">&lt;othAIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/othAIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;othAmountValue&gt;</span>0.0000<span class="nt">&lt;/othAmountValue&gt;</span>
+                       <span class="nt">&lt;othBIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/othBIssuedCash&gt;</span>
+                       <span class="nt">&lt;othBIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/othBIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;othIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/othIssuedCash&gt;</span>
+                       <span class="nt">&lt;othIssuedNominal&gt;</span>0.0000<span class="nt">&lt;/othIssuedNominal&gt;</span>
+                       <span class="nt">&lt;othIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/othIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;othNominalValue&gt;</span>0.0000<span class="nt">&lt;/othNominalValue&gt;</span>
+                       <span class="nt">&lt;othNumberOfShares&gt;</span>0<span class="nt">&lt;/othNumberOfShares&gt;</span>
+                       <span class="nt">&lt;prefAIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/prefAIssuedCash&gt;</span>
+                       <span class="nt">&lt;prefAIssuedNominal&gt;</span>0.0000<span class="nt">&lt;/prefAIssuedNominal&gt;</span>
+                       <span class="nt">&lt;prefAIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/prefAIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;prefANominalValue&gt;</span>0.0000<span class="nt">&lt;/prefANominalValue&gt;</span>
+                       <span class="nt">&lt;prefANumberOfShares&gt;</span>0<span class="nt">&lt;/prefANumberOfShares&gt;</span>
+                       <span class="nt">&lt;prefAmountAValue&gt;</span>0.0000<span class="nt">&lt;/prefAmountAValue&gt;</span>
+                       <span class="nt">&lt;prefAmountBValue&gt;</span>0.0000<span class="nt">&lt;/prefAmountBValue&gt;</span>
+                       <span class="nt">&lt;prefAmountValue&gt;</span>150000000.0000<span class="nt">&lt;/prefAmountValue&gt;</span>
+                       <span class="nt">&lt;prefBIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>509350516<span class="nt">&lt;/prefBIssuedCash&gt;</span>
+                       <span class="nt">&lt;prefBIssuedNominal&gt;</span>70.0000<span class="nt">&lt;/prefBIssuedNominal&gt;</span>
+                       <span class="nt">&lt;prefBIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/prefBIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;prefBNominalValue&gt;</span>0.0000<span class="nt">&lt;/prefBNominalValue&gt;</span>
+                       <span class="nt">&lt;prefBNumberOfShares&gt;</span>0<span class="nt">&lt;/prefBNumberOfShares&gt;</span>
+                       <span class="nt">&lt;prefIssuedCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/prefIssuedCash&gt;</span>
+                       <span class="nt">&lt;prefIssuedNominal&gt;</span>0.0000<span class="nt">&lt;/prefIssuedNominal&gt;</span>
+                       <span class="nt">&lt;prefIssuedNonCash</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/prefIssuedNonCash&gt;</span>
+                       <span class="nt">&lt;prefNominalValue&gt;</span>50.0000<span class="nt">&lt;/prefNominalValue&gt;</span>
+                       <span class="nt">&lt;prefNumberOfShares</span> <span class="na">xsi:type=</span><span class="s">&quot;soapenc:long&quot;</span><span class="nt">&gt;</span>300000000<span class="nt">&lt;/prefNumberOfShares&gt;</span>
+                       <span class="nt">&lt;totalIssued&gt;</span>36106001003.6900<span class="nt">&lt;/totalIssued&gt;</span>
+                    <span class="nt">&lt;/rocShareCapitalInfo&gt;</span>
+                    <span class="nt">&lt;rocShareholderInfo/&gt;</span>
+                    <span class="nt">&lt;rocShareholderListInfo&gt;</span>
+                       <span class="nt">&lt;errorMsg/&gt;</span>
+                       <span class="nt">&lt;infoId/&gt;</span>
+                       <span class="nt">&lt;successCode&gt;</span>00<span class="nt">&lt;/successCode&gt;</span>
+                       <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>1166-T<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>AMCORP GROUP BERHAD<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>158140531.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1938-10-10T16:40:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>381011085268<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>SOO NGIK GEE@SOO YEH JOO<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>8757000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>708932-T<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>ROCKWILLS TRUSTEE BERHAD<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>29001000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1935-12-08T16:40:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>351209085573<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>RAJA KARIB SHAH BIN RAJA SHAHRUDIN,DATO&#39;<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>2347583.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>845247-D<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>BIOTIARA SDN. BHD.<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>3000000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>857890-H<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>MUTIARA ARCA SDN. BHD.<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>13835284.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>-<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>XRS<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>REMAINING SHAREHOLDERS FOR BERHAD COMPANY<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>622154475.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1940-07-10T16:40:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>400711105232<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>ZAINAB BINTI S.YUSOFF BUX<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>4532700.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1967-11-12T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>671113086435<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>TAN EWE SEONG<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>2800000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1941-08-29T16:40:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>410830085069<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>TAN BENG GUAN<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>4100000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>3077-T<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>NEOH CHOO EE <span class="ni">&amp;amp;</span> COMPANY, SDN. BERHAD<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>5000000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1956-04-01T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>560402075124<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>YEOH GUAN LIEW<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>2027100.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;dob&gt;</span>1980-09-28T16:30:00.000Z<span class="nt">&lt;/dob&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>800929146697<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>MK<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>ADAM SHAH BIN AZLAN<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>7125100.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>274740-T<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>CIMB GROUP NOMINEES (TEMPATAN) SDN. BHD. PLEDGED SECURITIES ACCOUNT FOR AMCORP GROUP BERHAD (AGB CBC<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>122500000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>122372-P<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>AL WAKALAH NOMINEES (TEMPATAN) SDN BHD PLEDGED SECURITIES ACCOUNT FOR AMCORP GROUP BERHAD<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>84000000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>31121-M<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>BBL NOMINEES (TEMPATAN) SDN. BHD. PLEDGED SECURITIES ACCOUNT FOR AMCORP GROUP BERHAD<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>55000000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>274740-T<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>CIMB GROUP NOMINEES (TEMPATAN) SDN. BHD. PLEDGED SECURITIES ACCOUNT FOR AMCORP GROUP BERHAD<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>35000000.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>42234-H<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>ALLIANCEGROUP NOMINEES (TEMPATAN) SDN BHD PLEDGED SECURITIES ACCOUNT FOR AMCORP GROUP BERHAD<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>40985600.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>262422-A<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>UOB KAY HIAN NOMINEES (ASING) SDN BHD EXEMPT AN FOR UOB KAY HIAN PTE LTD (A/C CLIENTS)<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>3789837.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>265422-M<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>CIMSEC NOMINEES (ASING ) SDN BHD (EXEMPT AN FOR CGS-CIMB SECURITIES (SINGAPORE) PTE LTD)<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>1693525.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                          <span class="nt">&lt;rocShareholderInfos&gt;</span>
+                             <span class="nt">&lt;companyNo&gt;</span>6386<span class="nt">&lt;/companyNo&gt;</span>
+                             <span class="nt">&lt;idNo&gt;</span>6386-K<span class="nt">&lt;/idNo&gt;</span>
+                             <span class="nt">&lt;idType&gt;</span>C<span class="nt">&lt;/idType&gt;</span>
+                             <span class="nt">&lt;name&gt;</span>AMCORP PROPERTIES BERHAD SHARE BUY BACK ACCOUNT<span class="nt">&lt;/name&gt;</span>
+                             <span class="nt">&lt;share&gt;</span>18346500.00<span class="nt">&lt;/share&gt;</span>
+                             <span class="nt">&lt;shareVol/&gt;</span>
+                          <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                       <span class="nt">&lt;/rocShareholderInfos&gt;</span>
+                    <span class="nt">&lt;/rocShareholderListInfo&gt;</span>
+                 <span class="nt">&lt;/getInfoProfileReturn&gt;</span>
+              <span class="nt">&lt;/response&gt;</span>
+           <span class="nt">&lt;/inf:getInfoProfileResponse&gt;</span>
+        <span class="nt">&lt;/soapenv:Body&gt;</span>
+     <span class="nt">&lt;/soapenv:Envelope&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../getInfoProfileROB/" class="md-footer__link md-footer__link--prev" aria-label="Previous: getInfoProfile ROB" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              getInfoProfile ROB
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../getLlpCurrentProfile/getLlpCurrentProfile/" class="md-footer__link md-footer__link--next" aria-label="Next: getLlpCurrentProfile" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              getLlpCurrentProfile
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.annotate", "content.tabs.link"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

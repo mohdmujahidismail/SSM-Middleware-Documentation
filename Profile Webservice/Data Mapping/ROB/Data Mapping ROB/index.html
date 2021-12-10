@@ -1,0 +1,1670 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../img/Icon-01_white-01.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+    
+    
+      
+        <title>Data Mapping ROB - SSM Middleware Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.a617204b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Helvetica";--md-code-font:""}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-mapping-rob" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="SSM Middleware Documentation" class="md-header__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SSM Middleware Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Mapping ROB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        Intro
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Data%20Schema/Data%20Schema%20LLP/" class="md-tabs__link">
+        Data Schema
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../LLP/Data%20Mapping%20LLP/" class="md-tabs__link md-tabs__link--active">
+        Profile Webservice
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="SSM Middleware Documentation" class="md-nav__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    SSM Middleware Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intro" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Getting%20Started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../How%20To%20Call%20API/Token%20Authentication/" class="md-nav__link">
+        Token Authentication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Data Schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Schema" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Schema
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Data%20Schema/Data%20Schema%20LLP/" class="md-nav__link">
+        Data Schema LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Data%20Schema/Data%20Schema%20ROB/" class="md-nav__link">
+        Data Schema ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Data%20Schema/Data%20Schema%20ROC/" class="md-nav__link">
+        Data Schema ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Profile Webservice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Profile Webservice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Profile Webservice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Data Mapping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Mapping" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Data Mapping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LLP/Data%20Mapping%20LLP/" class="md-nav__link">
+        Data Mapping LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Data Mapping ROB
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Data Mapping ROB
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#business-profile" class="md-nav__link">
+    BUSINESS PROFILE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-informationeng" class="md-nav__link">
+    Business Information(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-type-eng" class="md-nav__link">
+    Business Type (ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch-informationeng" class="md-nav__link">
+    Branch Information(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-of-current-ownereng" class="md-nav__link">
+    Information of Current Owner(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-of-previous-ownereng" class="md-nav__link">
+    Information of Previous Owner(ENG)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROC/Data%20Mapping%20ROC/" class="md-nav__link">
+        Data Mapping ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Error%20Message/Error%20Message/" class="md-nav__link">
+        Exception Handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Sample Report
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sample Report" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sample Report
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sample%20Report/LLP/Sample%20Report%20LLP/" class="md-nav__link">
+        Sample Report LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sample%20Report/ROB/Sample%20Report%20ROB/" class="md-nav__link">
+        Sample Report ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sample%20Report/ROC/Sample%20Report%20ROC/" class="md-nav__link">
+        Sample Report ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WSDL%20File/WSDL%20File/" class="md-nav__link">
+        WSDL File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getBizProfile/getBizProfile/" class="md-nav__link">
+        getBizProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getCompProfile/getCompProfile/" class="md-nav__link">
+        getCompProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          getInfoProfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="getInfoProfile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          getInfoProfile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getInfoProfile/getInfoProfileROB/" class="md-nav__link">
+        getInfoProfile ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getInfoProfile/getInfoProfileROC/" class="md-nav__link">
+        getInfoProfile ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getLlpCurrentProfile/getLlpCurrentProfile/" class="md-nav__link">
+        getLlpCurrentProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getNewFormatEntityNo/getNewFormatEntityNo/" class="md-nav__link">
+        getNewFormatEntityNo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#business-profile" class="md-nav__link">
+    BUSINESS PROFILE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-informationeng" class="md-nav__link">
+    Business Information(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-type-eng" class="md-nav__link">
+    Business Type (ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch-informationeng" class="md-nav__link">
+    Branch Information(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-of-current-ownereng" class="md-nav__link">
+    Information of Current Owner(ENG)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-of-previous-ownereng" class="md-nav__link">
+    Information of Previous Owner(ENG)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="data-mapping-rob">Data Mapping ROB<a class="headerlink" href="#data-mapping-rob" title="Permanent link">#</a></h1>
+<h2 id="business-profile">BUSINESS PROFILE<a class="headerlink" href="#business-profile" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>Service getBizProfile
+</code></pre></div>
+<p>PDF TEMPLATE</p>
+<h2 id="business-informationeng">Business Information(ENG)<a class="headerlink" href="#business-informationeng" title="Permanent link">#</a></h2>
+<p>Maklumat Perniagaan(Malay)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>&nbsp;</th>
+            <th>Remarks</th>
+            <th>json Node / Middleware</th>
+            <th>Object Name</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Business Name</td>
+            <td>NAMA PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>registrationName</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Business Registrations No</td>
+            <td>NO.PENDAFTARAN PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td>200803090077
+                <br>(SA0085324-V)</td>
+            <td>registrationNo
+                <br>checkDigit</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>12-digit new ?</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>200803090077</td>
+            <td>newFormatNo</td>
+            <td>GetNewFormatEntity</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Company No.</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>SA0085324</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Principle Place of Business</td>
+            <td>ALAMAT UTAMA PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>mainAddress1</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>mainTown</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>mainPostcode</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>mainState</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Business OwnerShip</td>
+            <td>BENTUK PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td><b>Malay</b>
+                <br> Jika =1, PEMILIKAN TUNGGAL.
+                <br> Jika > 1, PERKONGSIAN
+                <br> <b>English</b>
+                <br> if = 1, SOLE PROPRIETORSHIP
+                <br> if >1 PARTNERSHIP</td>
+            <td>ownerCount</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Business Start Date</td>
+            <td>TARIKH MULA BERNIAGA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>startBusinessDate</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Registration Date</td>
+            <td>TARIKH PENDAFTARAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>registrationDate</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Business Expiry Date</td>
+            <td>TARIKH LUPUT PENDAFTARAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>endBusinessDate</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>LAST AMMENDMEND DATE</td>
+            <td>TARIKH PERUBAHAN TERAKHIR</td>
+            <td>&nbsp;</td>
+            <td>* need to view this column if value exist</td>
+            <td>ammendmentDate</td>
+            <td>robBusinessInfo</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>STATUS</td>
+            <td>STATUS</td>
+            <td>&nbsp;</td>
+            <td><b>A</b>-active,
+                <br> <b>L</b>-Expired,
+                <br> <b>T</b>-Terminated,
+                <br> <b>B</b>-LLP Conversion</td>
+            <td>status</td>
+            <td>robBusinessInfo</td>
+            <td>Aktif, Luput, Penamatan, Bubar-Pertukaran kepada Perkongsian Liabiliti Terhad (PLT)</td>
+        </tr>
+        <tr>
+            <td>TERMINATION DATE</td>
+            <td>TARIKH PENAMATAN</td>
+            <td>&nbsp;</td>
+            <td>* need this to view if STATUS=Terminated</td>
+            <td>terminationDate</td>
+            <td>robBusinessInfo</td>
+            <td>* Tiada Dalam Sijil</td>
+        </tr>
+        <tr>
+            <td>LLP NAME</td>
+            <td>NAMA PLT</td>
+            <td>&nbsp;</td>
+            <td>* need to view if status is B- Conversion to LLP</td>
+            <td>llpName</td>
+            <td>robBusinessInfo</td>
+            <td>* Tiada Dalam Sijil</td>
+        </tr>
+        <tr>
+            <td>LLP NUMBER</td>
+            <td>NOMBOR PLT</td>
+            <td>&nbsp;</td>
+            <td>* need to view if status is B- Conversion to LLP</td>
+            <td>llpNo</td>
+            <td>robBusinessInfo</td>
+            <td>* Tiada Dalam Sijil</td>
+        </tr>
+        <tr>
+            <td>CONVERSION DATE</td>
+            <td>TARIKH PERTUKARAN</td>
+            <td>&nbsp;</td>
+            <td>* need to view if status is B- Conversion to LLP</td>
+            <td>llpconvertDate</td>
+            <td>robBusinessInfo</td>
+            <td>* Tiada Dalam Sijil</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="business-type-eng">Business Type (ENG)<a class="headerlink" href="#business-type-eng" title="Permanent link">#</a></h2>
+<p>JENIS PERNIAGAAN(MALAY)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>&nbsp;</th>
+            <th>Remarks</th>
+            <th>json Node</th>
+            <th>Object Name</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Business Type</td>
+            <td>JENIS PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>description</td>
+            <td>robBusinessInfo</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="branch-informationeng">Branch Information(ENG)<a class="headerlink" href="#branch-informationeng" title="Permanent link">#</a></h2>
+<p>MAKLUMAT CAWANGAN(MALAY)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>&nbsp;</th>
+            <th>Column Name(MALAY)</th>
+            <th>&nbsp;</th>
+            <th>Remarks</th>
+            <th>&nbsp;</th>
+            <th>json Node</th>
+            <th>&nbsp;</th>
+            <th>Object Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>No Column name. base on pdf design just List the branch address accordingly.</td>
+            <td>&nbsp;</td>
+            <td>address1</td>
+            <td>&nbsp;</td>
+            <td>robBranchListInfo</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>town</td>
+            <td>&nbsp;</td>
+            <td>robBranchListInfo</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>postcode</td>
+            <td>&nbsp;</td>
+            <td>robBranchListInfo</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>state</td>
+            <td>&nbsp;</td>
+            <td>robBranchListInfo</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>status</td>
+            <td>&nbsp;</td>
+            <td>robBranchListInfo</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="information-of-current-ownereng">Information of Current Owner(ENG)<a class="headerlink" href="#information-of-current-ownereng" title="Permanent link">#</a></h2>
+<p>MAKLUMAT PEMILIK PERNIAGAAN TERKINI(Malay)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>&nbsp;</th>
+            <th>Remarks</th>
+            <th>json Node</th>
+            <th>Object Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Business Name</td>
+            <td>NAMA PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>registrationName</td>
+            <td>robBusinessInfo</td>
+        </tr>
+        <tr>
+            <td>Business Registrations No</td>
+            <td>NO.PENDAFTARAN PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td>200803090077 (SA0085324-V)</td>
+            <td>registrationNo
+                <br>checkDigit</td>
+            <td>robBusinessInfo</td>
+        </tr>
+        <tr>
+            <td>12-digit new</td>
+            <td>12 Digit Baru</td>
+            <td>&nbsp;</td>
+            <td>200803090077</td>
+            <td>NewFormatNo</td>
+            <td>GetNewFormatEntityno</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>SA0085324</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>NAMA</td>
+            <td>&nbsp;</td>
+            <td>This object took from list of robOwnershipListInfo with status = A . It means for current owner</td>
+            <td>ownerName</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>Residential Address</td>
+            <td>ALAMAT KEDIAMAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>address1</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>town</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>postcode</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>state</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>IC(OLD)</td>
+            <td>NO K/P(LAMA)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>idCardNumber</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>IC(NEW)</td>
+            <td>NO K/P(BARU)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>newIcNo</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>DATE OF BIRTH</td>
+            <td>TARIKH LAHIR</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>dob</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>RACE</td>
+            <td>BANGSA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>race</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>GENDER</td>
+            <td>JANTINA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>gender</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>NATIONALITY</td>
+            <td>KEWARGANEGARAAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>nationality</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>DATE JOIN</td>
+            <td>TARIKH MASUK</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>createDate</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="information-of-previous-ownereng">Information of Previous Owner(ENG)<a class="headerlink" href="#information-of-previous-ownereng" title="Permanent link">#</a></h2>
+<p>MAKLUMAT PEMILIK PERNIAGAAN TERDAHULU(Malay)</p>
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Column Name(English)</th>
+            <th>Column Name(MALAY)</th>
+            <th>&nbsp;</th>
+            <th>Remarks</th>
+            <th>json Node</th>
+            <th>Object Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Business Name</td>
+            <td>NAMA PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>registrationName</td>
+            <td>robBusinessInfo</td>
+        </tr>
+        <tr>
+            <td>Business Registrations No</td>
+            <td>NO.PENDAFTARAN PERNIAGAAN</td>
+            <td>&nbsp;</td>
+            <td>200803090077 (SA0085324-V)</td>
+            <td>registrationNo
+                <br>checkDigit</td>
+            <td>robBusinessInfo</td>
+        </tr>
+        <tr>
+            <td>12-digit new ?</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>200803090077</td>
+            <td>newFormatNo</td>
+            <td>GetNewFormatEntity</td>
+        </tr>
+        <tr>
+            <td>Company No.</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>SA0085324</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Check Digit</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>V</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>NAMA</td>
+            <td>&nbsp;</td>
+            <td>This object took from list of robOwnershipListInfo with status != A .It means previous owner</td>
+            <td>ownerName</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>Residential Address</td>
+            <td>ALAMAT KEDIAMAN</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>address1</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>town</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>postcode</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>state</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>IC(OLD)</td>
+            <td>NO K/P(LAMA)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>idCardNumber</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>IC(NEW)</td>
+            <td>NO K/P(BARU)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>newIcNo</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>DATE OF BIRTH</td>
+            <td>TARIKH LAHIR</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>dob</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>RACE</td>
+            <td>BANGSA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>race</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>GENDER</td>
+            <td>JANTINA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>gender</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>NATIONALITY</td>
+            <td>KEWARGANEGARAAN</td>
+            <td>&nbsp;</td>
+            <td>REFER parameter ROB lookup. English select vchdescription where vchparametertype='ROBCitizenship' and vchcode='MAL' MALAY select vchdescription where vchparametertype='ROBCitizenshipMalay' and vchcode='MAL'</td>
+            <td>nationality</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>DATE JOIN</td>
+            <td>TARIKH MASUK</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>createDate</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>DATE OF WITHDRAWAL</td>
+            <td>TARIKH KELUAR</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>updateDate</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+        <tr>
+            <td>REASON OF WITHDRAWAL</td>
+            <td>SEBAB KELUAR</td>
+            <td>&nbsp;</td>
+            <td>Refer to parameterROB.csv Sql (English) : select vchdescription where vchparametertype='ROBB4Amend' and vchcode='D' Sql (Malay) : select vchdescription where vchparametertype='ROBB4AmendMalay' and vchcode='D'</td>
+            <td>ammendmentType</td>
+            <td>robOwnerShipInfos</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Stamp</th>
+            <th colspan=5>For document with ctc</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CTC QR Code</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>User ID</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Printing Date with Time (Center)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Printing Date (Right Side)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Printing Date with Time (Bottom)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../LLP/Data%20Mapping%20LLP/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Mapping LLP" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Data Mapping LLP
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../ROC/Data%20Mapping%20ROC/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Mapping ROC" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Data Mapping ROC
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.annotate", "content.tabs.link"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

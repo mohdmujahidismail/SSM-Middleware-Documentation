@@ -1,0 +1,2207 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../img/Icon-01_white-01.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+    
+    
+      
+        <title>getLlpCurrentProfile - SSM Middleware Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a617204b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Helvetica";--md-code-font:""}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getllpcurrentprofile" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SSM Middleware Documentation" class="md-header__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SSM Middleware Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              getLlpCurrentProfile
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        Intro
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Data%20Schema/Data%20Schema%20LLP/" class="md-tabs__link">
+        Data Schema
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Data%20Mapping/LLP/Data%20Mapping%20LLP/" class="md-tabs__link md-tabs__link--active">
+        Profile Webservice
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SSM Middleware Documentation" class="md-nav__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    SSM Middleware Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intro" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Getting%20Started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../How%20To%20Call%20API/Token%20Authentication/" class="md-nav__link">
+        Token Authentication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Data Schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Schema" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Schema
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Data%20Schema/Data%20Schema%20LLP/" class="md-nav__link">
+        Data Schema LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Data%20Schema/Data%20Schema%20ROB/" class="md-nav__link">
+        Data Schema ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Data%20Schema/Data%20Schema%20ROC/" class="md-nav__link">
+        Data Schema ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Profile Webservice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Profile Webservice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Profile Webservice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Data Mapping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Mapping" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Data Mapping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Mapping/LLP/Data%20Mapping%20LLP/" class="md-nav__link">
+        Data Mapping LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Mapping/ROB/Data%20Mapping%20ROB/" class="md-nav__link">
+        Data Mapping ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Mapping/ROC/Data%20Mapping%20ROC/" class="md-nav__link">
+        Data Mapping ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Error%20Message/Error%20Message/" class="md-nav__link">
+        Exception Handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Sample Report
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sample Report" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sample Report
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sample%20Report/LLP/Sample%20Report%20LLP/" class="md-nav__link">
+        Sample Report LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sample%20Report/ROB/Sample%20Report%20ROB/" class="md-nav__link">
+        Sample Report ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sample%20Report/ROC/Sample%20Report%20ROC/" class="md-nav__link">
+        Sample Report ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WSDL%20File/WSDL%20File/" class="md-nav__link">
+        WSDL File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getBizProfile/getBizProfile/" class="md-nav__link">
+        getBizProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getCompProfile/getCompProfile/" class="md-nav__link">
+        getCompProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          getInfoProfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="getInfoProfile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          getInfoProfile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getInfoProfile/getInfoProfileROB/" class="md-nav__link">
+        getInfoProfile ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getInfoProfile/getInfoProfileROC/" class="md-nav__link">
+        getInfoProfile ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          getLlpCurrentProfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        getLlpCurrentProfile
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limited-liability-partnership-request-respond-data-mapping-and-issues" class="md-nav__link">
+    Limited Liability Partnership Request Respond, Data Mapping, and Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-reference" class="md-nav__link">
+    Message Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-message-mapping" class="md-nav__link">
+    Request Message Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-request-message" class="md-nav__link">
+    Sample Request Message
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-message-mapping-good-response" class="md-nav__link">
+    Response Message mapping (Good Response)
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Message mapping (Good Response)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping-header" class="md-nav__link">
+    Response mapping Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping-body-request" class="md-nav__link">
+    Response mapping Body (request)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping-body-reqbizaddress" class="md-nav__link">
+    Response mapping Body (reqBizAddress)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping-body-bizcodes" class="md-nav__link">
+    Response mapping Body (bizCodes)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-good-response-message" class="md-nav__link">
+    Sample Good Response Message
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getNewFormatEntityNo/getNewFormatEntityNo/" class="md-nav__link">
+        getNewFormatEntityNo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limited-liability-partnership-request-respond-data-mapping-and-issues" class="md-nav__link">
+    Limited Liability Partnership Request Respond, Data Mapping, and Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-reference" class="md-nav__link">
+    Message Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-message-mapping" class="md-nav__link">
+    Request Message Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-request-message" class="md-nav__link">
+    Sample Request Message
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-message-mapping-good-response" class="md-nav__link">
+    Response Message mapping (Good Response)
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Message mapping (Good Response)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping-header" class="md-nav__link">
+    Response mapping Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping-body-request" class="md-nav__link">
+    Response mapping Body (request)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping-body-reqbizaddress" class="md-nav__link">
+    Response mapping Body (reqBizAddress)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-mapping-body-bizcodes" class="md-nav__link">
+    Response mapping Body (bizCodes)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-good-response-message" class="md-nav__link">
+    Sample Good Response Message
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="getllpcurrentprofile">getLlpCurrentProfile<a class="headerlink" href="#getllpcurrentprofile" title="Permanent link">#</a></h1>
+<h2 id="limited-liability-partnership-request-respond-data-mapping-and-issues">Limited Liability Partnership Request Respond, Data Mapping, and Issues<a class="headerlink" href="#limited-liability-partnership-request-respond-data-mapping-and-issues" title="Permanent link">#</a></h2>
+<h2 id="message-reference">Message Reference<a class="headerlink" href="#message-reference" title="Permanent link">#</a></h2>
+<table class="tableizer-table">
+  <thead>
+    <tr class="tableizer-firstrow">
+      <th>Type</th>
+      <th>Description</th>
+      <th>Mandatory?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>JSON message header</td>
+      <td>JSON.Msg.Body.getLlpCurrentProfile.header<br> An information header of the message request.</td>
+      <td>YES </td>
+    </tr>
+    <tr>
+      <td>JSON request body</td>
+      <td>JSON.Msg.Body.getLlpCurrentProfile.request.param<br> An information of request parameter</td>
+      <td>YES</td>
+    </tr>
+    <tr>
+      <td>JSON good response body</td>
+      <td>JSON.Msg.Body.getLlpCurrentProfile.response.getLlpCurrentProfileReturn<br> An information of message response</td>
+      <td>YES</td>
+    </tr>
+    <tr>
+      <td>Host response body</td>
+      <td>JSON.Msg.Body.getLlpCurrentProfileResponse.getLlpCurrentProfileReturn<br> An information of response based on host service</td>
+      <td>YES</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="request-message-mapping">Request Message Mapping<a class="headerlink" href="#request-message-mapping" title="Permanent link">#</a></h2>
+<p>Refer Request Message mapping in Common Header Format</p>
+<table class="tableizer-table">
+  <thead>
+    <tr class="tableizer-firstrow">
+      <th>S/N</th>
+      <th>Request Body</th>
+      <th>Description </th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Req?</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>&nbsp;</td>
+      <td>Customer Id</td>
+      <td>An information of customer Id</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>&nbsp;</td>
+      <td>Customer Reference No</td>
+      <td>An information of customer reference number </td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>&nbsp;</td>
+      <td>Customer Request Date</td>
+      <td>An information that customer request date</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>&nbsp;</td>
+      <td>Entity No</td>
+      <td>An information of LLP entity number</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sample-request-message">Sample Request Message<a class="headerlink" href="#sample-request-message" title="Permanent link">#</a></h2>
+<p>Web Service - REST Request Message</p>
+<div class="highlight"><pre><span></span><code>    <span class="p">{</span>
+        <span class="nt">&quot;header&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;customerId&quot;</span><span class="p">:</span><span class="s2">&quot;MBDD&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;customerReferenceNo&quot;</span><span class="p">:</span><span class="s2">&quot;MBDDtest&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;customerRequestDate&quot;</span><span class="p">:</span><span class="s2">&quot;2021-09-02T10:00:00Z&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;request&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="response-message-mapping-good-response">Response Message mapping (Good Response)<a class="headerlink" href="#response-message-mapping-good-response" title="Permanent link">#</a></h2>
+<p>Refer Response Message mapping in Common Header Format.</p>
+<h5 id="response-mapping-header">Response mapping Header<a class="headerlink" href="#response-mapping-header" title="Permanent link">#</a></h5>
+<table class="tableizer-table">
+  <thead>
+    <tr class="tableizer-firstrow">
+      <th>S/N</th>
+      <th>Response Body (header)</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Req?</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>&nbsp;</td>
+      <td>Customer Id</td>
+      <td>An information of customer identification Id</td>
+      <td>String</td>
+      <td></td>
+      <td rowspan="11"></td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>&nbsp;</td>
+      <td>Customer Reference No</td>
+      <td>An information of customer reference number</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>&nbsp;</td>
+      <td>Customer Request Date</td>
+      <td>An information that customer request date</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>&nbsp;</td>
+      <td>Request Timestamp</td>
+      <td>An information of customer's LLP request timestamp </td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>&nbsp;</td>
+      <td>Response Timestamp</td>
+      <td>An information of customer's LLP response timestamp</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>6.</td>
+      <td>&nbsp;</td>
+      <td>Record Count</td>
+      <td>An information of LLP record count within its service</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>7.</td>
+      <td>&nbsp;</td>
+      <td>Error Code</td>
+      <td>An information if LLP details has error</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>8.</td>
+      <td>&nbsp;</td>
+      <td>Error Message</td>
+      <td>An information if LLP's details has error message</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>9.</td>
+      <td>&nbsp;</td>
+      <td>Host Error Code</td>
+      <td>An information if LLP's details has host error code</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>10.</td>
+      <td>&nbsp;</td>
+      <td>Host Error Message</td>
+      <td>An information if LLP's details has host error message</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>11.</td>
+      <td>&nbsp;</td>
+      <td>Operation Name</td>
+      <td>An information if LLP has operation name</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="response-mapping-body-request">Response mapping Body (request)<a class="headerlink" href="#response-mapping-body-request" title="Permanent link">#</a></h5>
+<table class="tableizer-table">
+  <thead>
+    <tr class="tableizer-firstrow">
+      <th>S/N</th>
+      <th>Response Body (request)</th>
+      <th>Description </th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Req?</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>&nbsp;</td>
+      <td>Entity No</td>
+      <td>An information of company entity number</td>
+      <td>String</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>&nbsp;</td>
+      <td>Llp Current Profile</td>
+      <td>An information of LLP current profile</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>&nbsp;</td>
+      <td>Llp Basic Profile</td>
+      <td>An information of LLP basic profile</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>&nbsp;</td>
+      <td>Entity Name</td>
+      <td>An information of company name</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>&nbsp;</td>
+      <td>Entity No New Format</td>
+      <td>An information of new format of company entity number</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>6.</td>
+      <td>&nbsp;</td>
+      <td>Entity Status</td>
+      <td>An information of company status</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>7.</td>
+      <td>&nbsp;</td>
+      <td>Entity Status Dt</td>
+      <td>An information of company status date</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>8.</td>
+      <td>&nbsp;</td>
+      <td>Entity Status Desc</td>
+      <td>An information of company status description</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>9.</td>
+      <td>&nbsp;</td>
+      <td>Entity Type</td>
+      <td>An information of company type</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>10.</td>
+      <td>&nbsp;</td>
+      <td>Entity Type Desc</td>
+      <td>An information of company type description</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>11.</td>
+      <td>&nbsp;</td>
+      <td>Entity Reg Dt</td>
+      <td>An information of company registration date</td>
+      <td> String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>12.</td>
+      <td>&nbsp;</td>
+      <td>Entity Email</td>
+      <td>An information of company's email</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>13.</td>
+      <td>&nbsp;</td>
+      <td>Entity Update Dt</td>
+      <td>An information of company update date (backend use)</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>14.</td>
+      <td>&nbsp;</td>
+      <td>Last Return Dt</td>
+      <td>An information of company last return date </td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>15.</td>
+      <td>&nbsp;</td>
+      <td>Next Return Dt</td>
+      <td>An information of company next return date </td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>16.</td>
+      <td>&nbsp;</td>
+      <td>Due Return Dt</td>
+      <td>An information of company due return date</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>17.</td>
+      <td>&nbsp;</td>
+      <td>Reg Nature Of Biz</td>
+      <td>An information of register of identity company business</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>18.</td>
+      <td>&nbsp;</td>
+      <td>Old Name</td>
+      <td>An information of company old name</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>19.</td>
+      <td>&nbsp;</td>
+      <td>Name Change Dt</td>
+      <td>An information of company changing name date</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>20.</td>
+      <td>&nbsp;</td>
+      <td>Origin</td>
+      <td>An information of company origin location</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>21.</td>
+      <td>&nbsp;</td>
+      <td>Origin Desc</td>
+      <td>An information of company origin location description </td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>22.</td>
+      <td>&nbsp;</td>
+      <td>Llp Conversion</td>
+      <td>An information of LLP conversion statement (backend use)</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="response-mapping-body-reqbizaddress">Response mapping Body (reqBizAddress)<a class="headerlink" href="#response-mapping-body-reqbizaddress" title="Permanent link">#</a></h5>
+<table class="tableizer-table">
+  <thead>
+    <tr class="tableizer-firstrow">
+      <th>S/N</th>
+      <th>Response Body (regBizAddresses)</th>
+      <th>Description </th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Req?</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>&nbsp;</td>
+      <td>Address 1</td>
+      <td>An information of company address</td>
+      <td>String</td>
+      <td></td>
+      <td rowspan="11"></td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>&nbsp;</td>
+      <td>Address 2</td>
+      <td>An information of company address </td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>&nbsp;</td>
+      <td>Address 3</td>
+      <td>An information of company address</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>&nbsp;</td>
+      <td>Postcode</td>
+      <td>An information of company postcode location</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>&nbsp;</td>
+      <td>City</td>
+      <td>An information of city of company</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>6.</td>
+      <td>&nbsp;</td>
+      <td>State</td>
+      <td>An information of company state (backend use)</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>7.</td>
+      <td>&nbsp;</td>
+      <td>State Desc</td>
+      <td>An information of company state description</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>8.</td>
+      <td>&nbsp;</td>
+      <td>Country</td>
+      <td>An information of company country (backend use)</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>9.</td>
+      <td>&nbsp;</td>
+      <td>Country Desc</td>
+      <td>An information of company country description print as Malaysia</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>10.</td>
+      <td>&nbsp;</td>
+      <td>PrincipalInd</td>
+      <td>&nbsp;</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>11.</td>
+      <td>&nbsp;</td>
+      <td>PrincipalInd Desc</td>
+      <td>&nbsp;</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="response-mapping-body-bizcodes">Response mapping Body (bizCodes)<a class="headerlink" href="#response-mapping-body-bizcodes" title="Permanent link">#</a></h5>
+<table class="tableizer-table">
+  <thead>
+    <tr class="tableizer-firstrow">
+      <th>S/N</th>
+      <th>Response Body (bizCodes)</th>
+      <th>Description </th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Req?</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>&nbsp;</td>
+      <td>Entity Biz Code</td>
+      <td>An information of company business code</td>
+      <td>String</td>
+      <td></td>
+      <td rowspan="2"></td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>&nbsp;</td>
+      <td>Entity Biz Code Desc</td>
+      <td>An information of company business code description</td>
+      <td>String</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sample-good-response-message">Sample Good Response Message<a class="headerlink" href="#sample-good-response-message" title="Permanent link">#</a></h2>
+<p>Web Service - REST Response Message
+<div class="highlight"><pre><span></span><code>       <span class="p">{</span>
+          <span class="nt">&quot;header&quot;</span><span class="p">:{</span>
+          <span class="nt">&quot;customerId&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;customerReferenceNo&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;customerRequestDate&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;requestTimestamp&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;responseTimestamp&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;recordCount&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;errorCode&quot;</span><span class="p">:</span><span class="s2">&quot;00&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;errorMessage&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;hostErrorCode&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;hostErrorMessage&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+          <span class="nt">&quot;operationName&quot;</span><span class="p">:</span><span class="kc">null</span>
+        <span class="p">},</span>
+           <span class="nt">&quot;request&quot;</span><span class="p">:{</span>
+              <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span>
+           <span class="p">},</span>
+           <span class="nt">&quot;llpCurrentProfile&quot;</span><span class="p">:{</span>
+              <span class="nt">&quot;llpBasicProfile&quot;</span><span class="p">:{</span>
+                 <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="s2">&quot;PROPPY CF  PLT&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="s2">&quot;202104001531&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityStatusDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-05-11T14:34:35.000Z&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="s2">&quot;EXISTING&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityType&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;LOCAL REGISTRATION&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityRegDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-05-11T14:34:35.000Z&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityEmail&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;entityUpdateDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-09-27T16:52:48.000Z&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;lastReturnDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;nextReturnDt&quot;</span><span class="p">:</span><span class="s2">&quot;2022-11-11T00:00:00.000Z&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;dueReturnDt&quot;</span><span class="p">:</span><span class="s2">&quot;2022-11-11T00:00:00.000Z&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;regNatureOfBiz&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                 <span class="nt">&quot;oldName&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;nameChangeDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;origin&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;originDesc&quot;</span><span class="p">:</span><span class="s2">&quot;MALAYSIA&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;llpConversion&quot;</span><span class="p">:</span><span class="kc">null</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;regOfficeAdd&quot;</span><span class="p">:{</span>
+                 <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;LOT 3.33, 3.40 &amp; 3.41, 3RD FLOOR&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;VIVA SHOPPING MALL&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="s2">&quot;NO. 85 JALAN LOKE YEW&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;55200&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;KUALA LUMPUR&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;W&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;W.P KUALA LUMPUR&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="s2">&quot;MALAYSIA&quot;</span><span class="p">,</span>
+                 <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                 <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;regBizAddresses&quot;</span><span class="p">:[</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;LOT 3.33, 3.40 &amp; 3.41, 3RD FLOOR&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;VIVA SHOPPING MALL&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="s2">&quot;NO. 85 JALAN LOKE YEW&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;55200&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;KUALA LUMPUR&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;W&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;W.P KUALA LUMPUR&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="s2">&quot;MALAYSIA&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="s2">&quot;YES&quot;</span>
+                 <span class="p">}</span>
+              <span class="p">],</span>
+              <span class="nt">&quot;involvements&quot;</span><span class="p">:[</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;CO&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;COMPLIANCE OFFICER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;CHEN FOCK SIONG&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;750602145665&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-05-11T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;NO 9, JALAN PP 55 SEKS 2&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;TAMAN PENGGIRAN PUTRA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="s2">&quot;BANDAR PUTRA PERMAI&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;43300&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;SERI KEMBANGAN&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;B&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;SELANGOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;LEE WILSON&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;720209015023&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-05-11T07:47:59.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;A1-32-1, MYHABITAT&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;NO. 3, JALAN AMAN&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="s2">&quot;OFF JALAN TUN RAZAK&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;55000&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;KUALA LUMPUR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;W&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;W.P KUALA LUMPUR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;LEONG EE MUN, SHARON&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;05&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PASSPORT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;K2156533P&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;23 JALAN KIA PENG&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;AMPERSAND CONDO UMT C-1-3&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;50450&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;KUALA LUMPUR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;W&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;W.P KUALA LUMPUR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;CHONG NYOK HOON&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;05&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PASSPORT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;S7463104E&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;BLK 249 KIM KEAT LINK&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;#06-73 310249&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;SGP&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;TSUN CHIN ENG&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;05&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PASSPORT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;S7977504E&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;547A SEGAR ROAD&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;#14-77 671547&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;SGP&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;TOH JIA XIN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;880929045426&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;NO 6 JALAN RIA 1&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;TAMAN RIA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="s2">&quot;KAMPUNG JAWA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;85000&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;SEGAMAT&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;J&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;JOHOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;BOK CHICK SHIM&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;880602566262&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;136 LORONG LASSIM&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;JALAN HAJI ABDULLAH&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;84000&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;MUAR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;J&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;JOHOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;CHEN FOCK SIONG&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;750602145665&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-05-11T07:47:59.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;NO 9, JALAN PP 55 SEKS 2&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;TAMAN PENGGIRAN PUTRA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="s2">&quot;BANDAR PUTRA PERMAI&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;43300&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;SERI KEMBANGAN&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;B&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;SELANGOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;CHONG YEE THENG&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;801020015913&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;NO.32 JALAN JASA 54&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;TAMAN MUTIARA RINI&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;81300&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;SKUDAI&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;J&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;JOHOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;WILLIAM MAN MAO WAH&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;05&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PASSPORT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;538682847&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;C-LG-2 JALAN BAYU 3&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;BUKIT GITA BAYU&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="s2">&quot;SERDANG&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;43300&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;SERI KEMBANGAN&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;B&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;SELANGOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;SASHEKUMAR A/L MUNIANDY&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;790523085533&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;B-13-11 BLOCK B PERDANA EXCLUSIVE CONDO&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;JALAN PJU 8/1 DAMANSARA PERDANA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;47820&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;PETALING JAYA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;B&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;SELANGOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;CHOW KEAN WAI&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;760529065317&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;A-3894 LORONG ALOR AKAR 14&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;JALAN ALOR AKAR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;25250&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;KUANTAN&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;C&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PAHANG&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;FUNG JUI SENG&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;750309017197&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;282-10 LORONG DATO AHMAD&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;JALAN KHALIDI&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;84000&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;MUAR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;J&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;JOHOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;YAP YIK YEE&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;741108145657&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;6 JALAN CHIN CHIN&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;OFF LORONG LOKE YEW&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;55200&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;KUALA LUMPUR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;W&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;W.P KUALA LUMPUR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;NGOW E-VAN @ EVAN NGOW&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;731121015081&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;1408 JALAN 17/26&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;46400&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;PETALING JAYA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;B&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;SELANGOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;LEE SENG YEOW&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;721007015767&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;B1205 PERDANA VIEW CONDO&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;NO. 21 JALAN PJU 8/1&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="s2">&quot;BANDAR DAMANSARA PERDANA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;47820&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;PETALING JAYA&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;B&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;SELANGOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;TAN KIM CHONG&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;720124015315&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;7 JALAN AMAN CERIA 3&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="s2">&quot;BANDAR TROPICANA AMAN&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;42500&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;TELOK PANGLIMA GARANG&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;B&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;SELANGOR&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">},</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;involveType&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;PARTNER&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveName&quot;</span><span class="p">:</span><span class="s2">&quot;NG KIM MOI&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdType&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveIdTypeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NRIC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveId&quot;</span><span class="p">:</span><span class="s2">&quot;651127055420&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveFromDt&quot;</span><span class="p">:</span><span class="s2">&quot;2021-07-21T00:00:00.000Z&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;involveEffectiveToDt&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNo&quot;</span><span class="p">:</span><span class="s2">&quot;LLP0028160-LGN&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityNoNewFormat&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatus&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;entityStatusDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                    <span class="nt">&quot;address&quot;</span><span class="p">:{</span>
+                       <span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="s2">&quot;LOT 4280 TAMAN BUKIT PELANDOK&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;address3&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;postcode&quot;</span><span class="p">:</span><span class="s2">&quot;71960&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;PORT DICKSON&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="s2">&quot;N&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;stateDesc&quot;</span><span class="p">:</span><span class="s2">&quot;NEGERI SEMBILAN&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;MYS&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;countryDesc&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalInd&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+                       <span class="nt">&quot;principalIndDesc&quot;</span><span class="p">:</span><span class="kc">null</span>
+                    <span class="p">}</span>
+                 <span class="p">}</span>
+              <span class="p">],</span>
+              <span class="nt">&quot;bizCodes&quot;</span><span class="p">:[</span>
+                 <span class="p">{</span>
+                    <span class="nt">&quot;entityBizCode&quot;</span><span class="p">:</span><span class="s2">&quot;64200&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;entityBizCodeDesc&quot;</span><span class="p">:</span><span class="s2">&quot;ACTIVITIES OF HOLDING COMPANIES&quot;</span>
+                 <span class="p">}</span>
+              <span class="p">]</span>
+           <span class="p">}</span>
+        <span class="p">}</span> 
+</code></pre></div></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../getInfoProfile/getInfoProfileROC/" class="md-footer__link md-footer__link--prev" aria-label="Previous: getInfoProfile ROC" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              getInfoProfile ROC
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../getNewFormatEntityNo/getNewFormatEntityNo/" class="md-footer__link md-footer__link--next" aria-label="Next: getNewFormatEntityNo" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              getNewFormatEntityNo
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.annotate", "content.tabs.link"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

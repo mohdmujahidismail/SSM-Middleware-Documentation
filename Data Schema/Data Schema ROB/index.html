@@ -1,0 +1,2337 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../img/Icon-01_white-01.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+    
+    
+      
+        <title>Data Schema ROB - SSM Middleware Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a617204b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Helvetica";--md-code-font:""}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rob_nametype" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SSM Middleware Documentation" class="md-header__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SSM Middleware Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Schema ROB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Intro
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Data%20Schema%20LLP/" class="md-tabs__link md-tabs__link--active">
+        Data Schema
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Profile%20Webservice/Data%20Mapping/LLP/Data%20Mapping%20LLP/" class="md-tabs__link">
+        Profile Webservice
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SSM Middleware Documentation" class="md-nav__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    SSM Middleware Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intro" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Getting%20Started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../How%20To%20Call%20API/Token%20Authentication/" class="md-nav__link">
+        Token Authentication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Data Schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Schema" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Schema
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Schema%20LLP/" class="md-nav__link">
+        Data Schema LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Data Schema ROB
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Data Schema ROB
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rob_nametype" class="md-nav__link">
+    ROB_NameType
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_business-statuscode" class="md-nav__link">
+    ROB_Business StatusCode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_statecode" class="md-nav__link">
+    ROB_StateCode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_idcolor" class="md-nav__link">
+    ROB_IDColor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_idcardtype" class="md-nav__link">
+    ROB_IDCardType
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_gender" class="md-nav__link">
+    ROB_Gender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_race" class="md-nav__link">
+    ROB_Race
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_nationality" class="md-nav__link">
+    ROB_Nationality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_branchstatus" class="md-nav__link">
+    ROB_BranchStatus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_amendmentype" class="md-nav__link">
+    ROB_Amendmentype
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_ownership" class="md-nav__link">
+    ROB_Ownership
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob-citizenship" class="md-nav__link">
+    ROB Citizenship
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idcolor" class="md-nav__link">
+    IDcolor
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Schema%20ROC/" class="md-nav__link">
+        Data Schema ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Profile Webservice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Profile Webservice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Profile Webservice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Data Mapping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Mapping" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Data Mapping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/Data%20Mapping/LLP/Data%20Mapping%20LLP/" class="md-nav__link">
+        Data Mapping LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/Data%20Mapping/ROB/Data%20Mapping%20ROB/" class="md-nav__link">
+        Data Mapping ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/Data%20Mapping/ROC/Data%20Mapping%20ROC/" class="md-nav__link">
+        Data Mapping ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/Error%20Message/Error%20Message/" class="md-nav__link">
+        Exception Handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Sample Report
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sample Report" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sample Report
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/Sample%20Report/LLP/Sample%20Report%20LLP/" class="md-nav__link">
+        Sample Report LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/Sample%20Report/ROB/Sample%20Report%20ROB/" class="md-nav__link">
+        Sample Report ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/Sample%20Report/ROC/Sample%20Report%20ROC/" class="md-nav__link">
+        Sample Report ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/WSDL%20File/WSDL%20File/" class="md-nav__link">
+        WSDL File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/getBizProfile/getBizProfile/" class="md-nav__link">
+        getBizProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/getCompProfile/getCompProfile/" class="md-nav__link">
+        getCompProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          getInfoProfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="getInfoProfile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          getInfoProfile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/getInfoProfile/getInfoProfileROB/" class="md-nav__link">
+        getInfoProfile ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/getInfoProfile/getInfoProfileROC/" class="md-nav__link">
+        getInfoProfile ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/getLlpCurrentProfile/getLlpCurrentProfile/" class="md-nav__link">
+        getLlpCurrentProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Profile%20Webservice/getNewFormatEntityNo/getNewFormatEntityNo/" class="md-nav__link">
+        getNewFormatEntityNo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rob_nametype" class="md-nav__link">
+    ROB_NameType
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_business-statuscode" class="md-nav__link">
+    ROB_Business StatusCode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_statecode" class="md-nav__link">
+    ROB_StateCode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_idcolor" class="md-nav__link">
+    ROB_IDColor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_idcardtype" class="md-nav__link">
+    ROB_IDCardType
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_gender" class="md-nav__link">
+    ROB_Gender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_race" class="md-nav__link">
+    ROB_Race
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_nationality" class="md-nav__link">
+    ROB_Nationality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_branchstatus" class="md-nav__link">
+    ROB_BranchStatus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_amendmentype" class="md-nav__link">
+    ROB_Amendmentype
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob_ownership" class="md-nav__link">
+    ROB_Ownership
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rob-citizenship" class="md-nav__link">
+    ROB Citizenship
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idcolor" class="md-nav__link">
+    IDcolor
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>Data Schema ROB</h1>
+
+<h2 id="rob_nametype">ROB_NameType<a class="headerlink" href="#rob_nametype" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:460px"></div></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trade name</td>
+<td>T</td>
+</tr>
+<tr>
+<td>Personal Name</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_business-statuscode">ROB_Business StatusCode<a class="headerlink" href="#rob_business-statuscode" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:100px">vchcode</div></th>
+<th>vchdescription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td>L</td>
+<td>EXPIRED</td>
+</tr>
+<tr>
+<td>T</td>
+<td>TERMINATED</td>
+</tr>
+<tr>
+<td>B</td>
+<td>DISSOLVED-CONVERSION TO LIMITED LIABILITY PARTNERSHIP(LLP)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_statecode">ROB_StateCode<a class="headerlink" href="#rob_statecode" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:370px">vchcode</div></th>
+<th>vchdescription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>PERLIS</td>
+</tr>
+<tr>
+<td>K</td>
+<td>KEDAH</td>
+</tr>
+<tr>
+<td>P</td>
+<td>PULAU PINANG</td>
+</tr>
+<tr>
+<td>D</td>
+<td>KELANTAN</td>
+</tr>
+<tr>
+<td>T</td>
+<td>TERENGGANU</td>
+</tr>
+<tr>
+<td>A</td>
+<td>PERAK</td>
+</tr>
+<tr>
+<td>B</td>
+<td>SELANGOR</td>
+</tr>
+<tr>
+<td>C</td>
+<td>PAHANG</td>
+</tr>
+<tr>
+<td>N</td>
+<td>NEGERI SEMBILAN</td>
+</tr>
+<tr>
+<td>M</td>
+<td>MELAKA</td>
+</tr>
+<tr>
+<td>J</td>
+<td>JOHOR</td>
+</tr>
+<tr>
+<td>X</td>
+<td>SABAH</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>SARAWAK</td>
+</tr>
+<tr>
+<td>L</td>
+<td>W.P. LABUAN</td>
+</tr>
+<tr>
+<td>W</td>
+<td>WILAYAH PERSEKUTUAN</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>SINGAPURA</td>
+</tr>
+<tr>
+<td>I</td>
+<td>INTERNET</td>
+</tr>
+<tr>
+<td>U</td>
+<td>W.P. PUTRAJAYA</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_idcolor">ROB_IDColor<a class="headerlink" href="#rob_idcolor" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:560px">ROB_IDColor</div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_idcardtype">ROB_IDCardType<a class="headerlink" href="#rob_idcardtype" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:360px">ROB_IDCardType</div></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>K</td>
+<td>OLD IC</td>
+</tr>
+<tr>
+<td>2</td>
+<td>P</td>
+<td>PASSPORT</td>
+</tr>
+<tr>
+<td>3</td>
+<td>S</td>
+<td>POLICE</td>
+</tr>
+<tr>
+<td>4</td>
+<td>T</td>
+<td>ARMY</td>
+</tr>
+<tr>
+<td>858</td>
+<td>K</td>
+<td>K/P LAMA</td>
+</tr>
+<tr>
+<td>859</td>
+<td>P</td>
+<td>PASPOT</td>
+</tr>
+<tr>
+<td>860</td>
+<td>S</td>
+<td>POLIS</td>
+</tr>
+<tr>
+<td>861</td>
+<td>T</td>
+<td>TENTERA</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_gender">ROB_Gender<a class="headerlink" href="#rob_gender" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:440px">vchcode</div></th>
+<th>vchdescription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L</td>
+<td>MALE</td>
+</tr>
+<tr>
+<td>P</td>
+<td>FEMALE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_race">ROB_Race<a class="headerlink" href="#rob_race" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:380px">vchcode</div></th>
+<th>vchdescription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J</td>
+<td>BAJAU</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>BERAWAN</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>BIDAYUH</td>
+</tr>
+<tr>
+<td>G</td>
+<td>BISAYAH</td>
+</tr>
+<tr>
+<td>B</td>
+<td>BUMIPUTERA SABAH</td>
+</tr>
+<tr>
+<td>W</td>
+<td>BUMIPUTERA SARAWAK</td>
+</tr>
+<tr>
+<td>C</td>
+<td>CINA</td>
+</tr>
+<tr>
+<td>D</td>
+<td>DUSUN</td>
+</tr>
+<tr>
+<td>F</td>
+<td>FOREIGNER</td>
+</tr>
+<tr>
+<td>T</td>
+<td>IBAN</td>
+</tr>
+<tr>
+<td>I</td>
+<td>INDIA</td>
+</tr>
+<tr>
+<td>K</td>
+<td>KADAZAN</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>KAYAN</td>
+</tr>
+<tr>
+<td>H</td>
+<td>KELABIT</td>
+</tr>
+<tr>
+<td>V</td>
+<td>KENYAH</td>
+</tr>
+<tr>
+<td>O</td>
+<td>LAIN2 BANGSA</td>
+</tr>
+<tr>
+<td>P</td>
+<td>LUN BAWANG</td>
+</tr>
+<tr>
+<td>E</td>
+<td>MELANAU</td>
+</tr>
+<tr>
+<td>M</td>
+<td>MELAYU</td>
+</tr>
+<tr>
+<td>N</td>
+<td>NATIVE</td>
+</tr>
+<tr>
+<td>X</td>
+<td>PENAN</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_nationality">ROB_Nationality<a class="headerlink" href="#rob_nationality" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:330px">vchcode</div></th>
+<th>vchdescription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADE</td>
+<td>ADEN</td>
+</tr>
+<tr>
+<td>AFG</td>
+<td>AFGHANISTAN</td>
+</tr>
+<tr>
+<td>AGL</td>
+<td>ANGUILLA</td>
+</tr>
+<tr>
+<td>ALG</td>
+<td>ALGERIA</td>
+</tr>
+<tr>
+<td>ALM</td>
+<td>ALMAIN</td>
+</tr>
+<tr>
+<td>AND</td>
+<td>ANDORRA</td>
+</tr>
+<tr>
+<td>ANG</td>
+<td>ANGOLA</td>
+</tr>
+<tr>
+<td>ANT</td>
+<td>ANTIGUA</td>
+</tr>
+<tr>
+<td>ARG</td>
+<td>ARGENTINA</td>
+</tr>
+<tr>
+<td>ASA</td>
+<td>AMERICAN SAMOA</td>
+</tr>
+<tr>
+<td>AST</td>
+<td>AUSTRIA</td>
+</tr>
+<tr>
+<td>AUS</td>
+<td>AUSTRALIA</td>
+</tr>
+<tr>
+<td>AZO</td>
+<td>AZORES</td>
+</tr>
+<tr>
+<td>BAH</td>
+<td>BAHRAIN</td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>BELEARIC ISLAND</td>
+</tr>
+<tr>
+<td>BAN</td>
+<td>BANGLADESH</td>
+</tr>
+<tr>
+<td>BAR</td>
+<td>BARBADOS</td>
+</tr>
+<tr>
+<td>BBB</td>
+<td>BANGSA-BANGSA BERSATU</td>
+</tr>
+<tr>
+<td>BEL</td>
+<td>BELGIUM</td>
+</tr>
+<tr>
+<td>BER</td>
+<td>BERMUDA</td>
+</tr>
+<tr>
+<td>BHM</td>
+<td>BAHAMAS</td>
+</tr>
+<tr>
+<td>BIS</td>
+<td>BISSAU</td>
+</tr>
+<tr>
+<td>BOS</td>
+<td>BOSNIA HERZOGOVINA</td>
+</tr>
+<tr>
+<td>BOL</td>
+<td>BOLIVIA</td>
+</tr>
+<tr>
+<td>BRA</td>
+<td>BRAZIL</td>
+</tr>
+<tr>
+<td>BRU</td>
+<td>BRUNEI</td>
+</tr>
+<tr>
+<td>BUL</td>
+<td>BULGARIA</td>
+</tr>
+<tr>
+<td>BUR</td>
+<td>MYAMMAR</td>
+</tr>
+<tr>
+<td>BWI</td>
+<td>BRITISH WEST INDIES</td>
+</tr>
+<tr>
+<td>CAM</td>
+<td>CAMERON</td>
+</tr>
+<tr>
+<td>CAN</td>
+<td>CANADA</td>
+</tr>
+<tr>
+<td>CEU</td>
+<td>CEUTA &amp; MELLILA</td>
+</tr>
+<tr>
+<td>CHA</td>
+<td>CHAD</td>
+</tr>
+<tr>
+<td>CHI</td>
+<td>CHILE</td>
+</tr>
+<tr>
+<td>CNI</td>
+<td>CAYMAN ISLAND</td>
+</tr>
+<tr>
+<td>CRA</td>
+<td>COSTA RICA</td>
+</tr>
+<tr>
+<td>CSI</td>
+<td>CHRISTMAS ISLAND</td>
+</tr>
+<tr>
+<td>CUB</td>
+<td>CUBA</td>
+</tr>
+<tr>
+<td>CVI</td>
+<td>CAPE VERDE ISLAND</td>
+</tr>
+<tr>
+<td>CYI</td>
+<td>CANARY ISLAND</td>
+</tr>
+<tr>
+<td>CYP</td>
+<td>CYPRUS</td>
+</tr>
+<tr>
+<td>CZE</td>
+<td>CZECHOSLOVAKIA</td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>DENMARK</td>
+</tr>
+<tr>
+<td>DOM</td>
+<td>COMMONWEALTH OF DOMINICA</td>
+</tr>
+<tr>
+<td>DRK</td>
+<td>KOREA (DEM. P.R)</td>
+</tr>
+<tr>
+<td>EGY</td>
+<td>EGYPT</td>
+</tr>
+<tr>
+<td>EIR</td>
+<td>EIRE</td>
+</tr>
+<tr>
+<td>EQU</td>
+<td>EQUADOR</td>
+</tr>
+<tr>
+<td>ESR</td>
+<td>EL SALVADOR</td>
+</tr>
+<tr>
+<td>ETH</td>
+<td>ETHIOPIA</td>
+</tr>
+<tr>
+<td>FEI</td>
+<td>FAEROE ISLAND</td>
+</tr>
+<tr>
+<td>FII</td>
+<td>FIJI ISLAND</td>
+</tr>
+<tr>
+<td>FIN</td>
+<td>FINLAND</td>
+</tr>
+<tr>
+<td>FRA</td>
+<td>FRANCE</td>
+</tr>
+<tr>
+<td>FWI</td>
+<td>FRENCH W. INDIES</td>
+</tr>
+<tr>
+<td>GAB</td>
+<td>GABON</td>
+</tr>
+<tr>
+<td>GAM</td>
+<td>GAMBIA</td>
+</tr>
+<tr>
+<td>GER</td>
+<td>GERMANY (WEST)</td>
+</tr>
+<tr>
+<td>GHA</td>
+<td>GHANA</td>
+</tr>
+<tr>
+<td>GIB</td>
+<td>GIBRALTAR</td>
+</tr>
+<tr>
+<td>GRA</td>
+<td>GRANADA</td>
+</tr>
+<tr>
+<td>GRE</td>
+<td>GREECE</td>
+</tr>
+<tr>
+<td>GTE</td>
+<td>GUATEMALA</td>
+</tr>
+<tr>
+<td>GUA</td>
+<td>GUAM</td>
+</tr>
+<tr>
+<td>GUI</td>
+<td>GUINEA</td>
+</tr>
+<tr>
+<td>GUY</td>
+<td>GUYANA</td>
+</tr>
+<tr>
+<td>HKG</td>
+<td>HONG KONG</td>
+</tr>
+<tr>
+<td>HON</td>
+<td>HONDURAS</td>
+</tr>
+<tr>
+<td>HUN</td>
+<td>HUNGARY</td>
+</tr>
+<tr>
+<td>ICE</td>
+<td>ICELAND</td>
+</tr>
+<tr>
+<td>INA</td>
+<td>INDONESIA</td>
+</tr>
+<tr>
+<td>IND</td>
+<td>INDIA</td>
+</tr>
+<tr>
+<td>PAK</td>
+<td>PAKISTAN</td>
+</tr>
+<tr>
+<td>IRN</td>
+<td>IRAN</td>
+</tr>
+<tr>
+<td>ITA</td>
+<td>ITALY</td>
+</tr>
+<tr>
+<td>JAM</td>
+<td>JAMAICA</td>
+</tr>
+<tr>
+<td>JAP</td>
+<td>JAPAN</td>
+</tr>
+<tr>
+<td>JOR</td>
+<td>JORDAN</td>
+</tr>
+<tr>
+<td>KAM</td>
+<td>KAMPUCHEA</td>
+</tr>
+<tr>
+<td>KEN</td>
+<td>KENYA</td>
+</tr>
+<tr>
+<td>KUW</td>
+<td>KUWAIT</td>
+</tr>
+<tr>
+<td>LAO</td>
+<td>LAOS</td>
+</tr>
+<tr>
+<td>LEB</td>
+<td>LEBANON</td>
+</tr>
+<tr>
+<td>LIB</td>
+<td>LIBERIA</td>
+</tr>
+<tr>
+<td>LUX</td>
+<td>LUXEMBORG</td>
+</tr>
+<tr>
+<td>MAC</td>
+<td>MACAO</td>
+</tr>
+<tr>
+<td>MAD</td>
+<td>MADERIA</td>
+</tr>
+<tr>
+<td>IRL</td>
+<td>IRELAND</td>
+</tr>
+<tr>
+<td>MAL</td>
+<td>MALAYSIA</td>
+</tr>
+<tr>
+<td>MAU</td>
+<td>MAURITANIA</td>
+</tr>
+<tr>
+<td>MEX</td>
+<td>MEXICO</td>
+</tr>
+<tr>
+<td>MLI</td>
+<td>MALI</td>
+</tr>
+<tr>
+<td>MLT</td>
+<td>MALTA</td>
+</tr>
+<tr>
+<td>MLW</td>
+<td>MALAWI</td>
+</tr>
+<tr>
+<td>MON</td>
+<td>MONTSERRAT</td>
+</tr>
+<tr>
+<td>MOR</td>
+<td>MOROCCO</td>
+</tr>
+<tr>
+<td>MOZ</td>
+<td>MOZAMBIQUE</td>
+</tr>
+<tr>
+<td>MRT</td>
+<td>MAURITIUS</td>
+</tr>
+<tr>
+<td>MSI</td>
+<td>MALDIVES ISLAND</td>
+</tr>
+<tr>
+<td>NAU</td>
+<td>NAURA</td>
+</tr>
+<tr>
+<td>NEP</td>
+<td>NEPAL</td>
+</tr>
+<tr>
+<td>NET</td>
+<td>NETHERLANDS</td>
+</tr>
+<tr>
+<td>NGR</td>
+<td>NIGER</td>
+</tr>
+<tr>
+<td>NHS</td>
+<td>NEW HEBRIDES</td>
+</tr>
+<tr>
+<td>NIC</td>
+<td>NICARAGUA</td>
+</tr>
+<tr>
+<td>NIG</td>
+<td>NIGERIA</td>
+</tr>
+<tr>
+<td>NIU</td>
+<td>NIUE</td>
+</tr>
+<tr>
+<td>NKI</td>
+<td>NORFOLD ISLAND</td>
+</tr>
+<tr>
+<td>NOR</td>
+<td>NORWAY</td>
+</tr>
+<tr>
+<td>NWI</td>
+<td>NETHERLANDS WI</td>
+</tr>
+<tr>
+<td>NZD</td>
+<td>NEW ZEALAND</td>
+</tr>
+<tr>
+<td>OMA</td>
+<td>OMAN</td>
+</tr>
+<tr>
+<td>PAN</td>
+<td>PANAMA</td>
+</tr>
+<tr>
+<td>PAR</td>
+<td>PARAGUAY</td>
+</tr>
+<tr>
+<td>PER</td>
+<td>PERU</td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>PHILIPPINES</td>
+</tr>
+<tr>
+<td>PLD</td>
+<td>POLAND</td>
+</tr>
+<tr>
+<td>PNG</td>
+<td>PAPUA NEW GUINEA</td>
+</tr>
+<tr>
+<td>POL</td>
+<td>POLIS</td>
+</tr>
+<tr>
+<td>POR</td>
+<td>PORTUGAL</td>
+</tr>
+<tr>
+<td>PRC</td>
+<td>CHINA (PEOPLES REPUBLIC)</td>
+</tr>
+<tr>
+<td>PSN</td>
+<td>PERSATUAN</td>
+</tr>
+<tr>
+<td>PUE</td>
+<td>PUERTO RICO</td>
+</tr>
+<tr>
+<td>RUM</td>
+<td>RUMANIA</td>
+</tr>
+<tr>
+<td>SAN</td>
+<td>SANAA (YEMEN ARAB REPUBLIC)</td>
+</tr>
+<tr>
+<td>SAU</td>
+<td>SAUDIA ARABIA</td>
+</tr>
+<tr>
+<td>SEN</td>
+<td>SENEGAL</td>
+</tr>
+<tr>
+<td>SEY</td>
+<td>SEYCHELLES</td>
+</tr>
+<tr>
+<td>SIA</td>
+<td>ST. LUCIA</td>
+</tr>
+<tr>
+<td>SIN</td>
+<td>SINGAPORE</td>
+</tr>
+<tr>
+<td>SKA</td>
+<td>ST. KITTA</td>
+</tr>
+<tr>
+<td>ALB</td>
+<td>ALBANIA</td>
+</tr>
+<tr>
+<td>SNI</td>
+<td>SOLOMON ISLAND</td>
+</tr>
+<tr>
+<td>SOK</td>
+<td>KOREA SOUTH</td>
+</tr>
+<tr>
+<td>SOM</td>
+<td>SOMALIA</td>
+</tr>
+<tr>
+<td>SPA</td>
+<td>SPAIN</td>
+</tr>
+<tr>
+<td>SRI</td>
+<td>SRI LANGKA</td>
+</tr>
+<tr>
+<td>IRN</td>
+<td>IRAN</td>
+</tr>
+<tr>
+<td>SUD</td>
+<td>SUDAN</td>
+</tr>
+<tr>
+<td>SVT</td>
+<td>ST. VINCENT</td>
+</tr>
+<tr>
+<td>SWE</td>
+<td>SWEDEN</td>
+</tr>
+<tr>
+<td>SWI</td>
+<td>SWITZERLAND</td>
+</tr>
+<tr>
+<td>TAH</td>
+<td>TAHITI</td>
+</tr>
+<tr>
+<td>TAR</td>
+<td>TANGIER</td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>TENTERA</td>
+</tr>
+<tr>
+<td>THA</td>
+<td>THAILAND</td>
+</tr>
+<tr>
+<td>TON</td>
+<td>TONGUA</td>
+</tr>
+<tr>
+<td>TSI</td>
+<td>TURKS ISLAND</td>
+</tr>
+<tr>
+<td>TTO</td>
+<td>TRINIDAD &amp; TABAGO</td>
+</tr>
+<tr>
+<td>TUN</td>
+<td>TUNISIA</td>
+</tr>
+<tr>
+<td>TUR</td>
+<td>TURKEY</td>
+</tr>
+<tr>
+<td>UAE</td>
+<td>UNITED ARAB EMIRATWES</td>
+</tr>
+<tr>
+<td>UGA</td>
+<td>UGANDA</td>
+</tr>
+<tr>
+<td>UKG</td>
+<td>UNITED KINGDOM</td>
+</tr>
+<tr>
+<td>URU</td>
+<td>URUGUAY</td>
+</tr>
+<tr>
+<td>USA</td>
+<td>UNITED STATES OF AMERICA</td>
+</tr>
+<tr>
+<td>USR</td>
+<td>U.S.S.R.</td>
+</tr>
+<tr>
+<td>UVA</td>
+<td>UPPER VOLTA</td>
+</tr>
+<tr>
+<td>VAT</td>
+<td>VATICAN CITY</td>
+</tr>
+<tr>
+<td>VEN</td>
+<td>VENEZUELA</td>
+</tr>
+<tr>
+<td>VIB</td>
+<td>VIRGIN ISLAND (BRI)</td>
+</tr>
+<tr>
+<td>VIE</td>
+<td>VIETNAM</td>
+</tr>
+<tr>
+<td>VIU</td>
+<td>VIRGIN ISLAND (US)</td>
+</tr>
+<tr>
+<td>WSA</td>
+<td>WESTERN SAMOA</td>
+</tr>
+<tr>
+<td>YUG</td>
+<td>YUGOSLAVIA</td>
+</tr>
+<tr>
+<td>ZAI</td>
+<td>ZAIRE</td>
+</tr>
+<tr>
+<td>ZAM</td>
+<td>ZAMBIA</td>
+</tr>
+<tr>
+<td>ZIM</td>
+<td>ZIMBABWE</td>
+</tr>
+<tr>
+<td>KOR</td>
+<td>SOUTH KOREA</td>
+</tr>
+<tr>
+<td>IOM</td>
+<td>ISLE OF MAN,BRITAIN</td>
+</tr>
+<tr>
+<td>TAI</td>
+<td>TAIWAN</td>
+</tr>
+<tr>
+<td>SCO</td>
+<td>SCOTLAND</td>
+</tr>
+<tr>
+<td>AFR</td>
+<td>AFRICA</td>
+</tr>
+<tr>
+<td>SAF</td>
+<td>AFRIKA SELATAN</td>
+</tr>
+<tr>
+<td>BVI</td>
+<td>BRITISH VIRGIN ISLANDS</td>
+</tr>
+<tr>
+<td>YAM</td>
+<td>YAMAN</td>
+</tr>
+<tr>
+<td>LIA</td>
+<td>LIBYA</td>
+</tr>
+<tr>
+<td>SYR</td>
+<td>SYRIA</td>
+</tr>
+<tr>
+<td>CRO</td>
+<td>CROATIA</td>
+</tr>
+<tr>
+<td>CON</td>
+<td>REPUBLIC OF CONGO</td>
+</tr>
+<tr>
+<td>KIR</td>
+<td>REP. OF KIRIBATI</td>
+</tr>
+<tr>
+<td>COL</td>
+<td>REPUBLIC OF COLOMBIA</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_branchstatus">ROB_BranchStatus<a class="headerlink" href="#rob_branchstatus" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:470px">chrbranchstatus </div></th>
+<th>vchdesc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Aktif</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Tidak Aktif</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_amendmentype">ROB_Amendmentype<a class="headerlink" href="#rob_amendmentype" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:380px">vchcode</div></th>
+<th>vchdescription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>PARTNERSHIP DISSOLVE</td>
+</tr>
+<tr>
+<td>O</td>
+<td>COURT ORDER</td>
+</tr>
+<tr>
+<td>B</td>
+<td>NEW BRANCH</td>
+</tr>
+<tr>
+<td>T</td>
+<td>CLOSE BRANCH</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Pemilik Baru</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Tarik Diri</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Kematian</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Perubahan Alamat</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Perubahan Milik</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Perubahan Nombor KP</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Perubahan Nama Pemilik</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Pembubaran Perkongsian</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Perintah Mahkamah</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob_ownership">ROB_Ownership<a class="headerlink" href="#rob_ownership" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:370px">vchcode</div></th>
+<th>vchdescription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>SOLE PROPRIETORSHIP</td>
+</tr>
+<tr>
+<td>U</td>
+<td>PARTNERSHIP</td>
+</tr>
+<tr>
+<td>B</td>
+<td>ORDINARY PARTNERSHIP</td>
+</tr>
+<tr>
+<td>P</td>
+<td>POWER OF ATTORNEY</td>
+</tr>
+<tr>
+<td>A</td>
+<td>ADMINISTRATOR</td>
+</tr>
+<tr>
+<td>R</td>
+<td>LOSS</td>
+</tr>
+<tr>
+<td>F</td>
+<td>BANKRUPT</td>
+</tr>
+<tr>
+<td>C</td>
+<td>COURT ORDER</td>
+</tr>
+<tr>
+<td>E</td>
+<td>EXUTRIX</td>
+</tr>
+<tr>
+<td>G</td>
+<td>PENGURUS</td>
+</tr>
+<tr>
+<td>K</td>
+<td>RAKAN PENGURUSAN</td>
+</tr>
+<tr>
+<td>W</td>
+<td>TARIK DIRI</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rob-citizenship">ROB Citizenship<a class="headerlink" href="#rob-citizenship" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:380px">Code&lt;</div></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAL</td>
+<td>MALAYSIAN CITIZEN</td>
+</tr>
+<tr>
+<td>PMR</td>
+<td>PERMANENT RESIDENT</td>
+</tr>
+<tr>
+<td>PDA</td>
+<td>FOREIGNERS</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="idcolor">IDcolor<a class="headerlink" href="#idcolor" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><div style="width:460px">Code&lt;</div></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B</td>
+<td>BLUE</td>
+</tr>
+<tr>
+<td>M</td>
+<td>RED</td>
+</tr>
+<tr>
+<td>N</td>
+<td>NONE</td>
+</tr>
+<tr>
+<td>L</td>
+<td>OTHERS</td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Data%20Schema%20LLP/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Schema LLP" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Data Schema LLP
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Data%20Schema%20ROC/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Schema ROC" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Data Schema ROC
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.annotate", "content.tabs.link"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

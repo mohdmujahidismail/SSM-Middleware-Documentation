@@ -1,0 +1,1544 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../img/Icon-01_white-01.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+    
+    
+      
+        <title>Getting Started - SSM Middleware Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a617204b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Helvetica";--md-code-font:""}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SSM Middleware Documentation" class="md-header__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SSM Middleware Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Intro
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Data%20Schema/Data%20Schema%20LLP/" class="md-tabs__link">
+        Data Schema
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Profile%20Webservice/Data%20Mapping/LLP/Data%20Mapping%20LLP/" class="md-tabs__link">
+        Profile Webservice
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SSM Middleware Documentation" class="md-nav__button md-logo" aria-label="SSM Middleware Documentation" data-md-component="logo">
+      
+  <img src="../img/Icon-01_white-01.png" alt="logo">
+
+    </a>
+    SSM Middleware Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intro" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Getting Started
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-glosary" class="md-nav__link">
+    1. Glosary
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Glosary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-1-glossary-table" class="md-nav__link">
+    Table 1 : Glossary Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ssm-middleware" class="md-nav__link">
+    2. SSM Middleware
+  </a>
+  
+    <nav class="md-nav" aria-label="2. SSM Middleware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-what-needs-to-be-done-for-connecting-to-ssm-middleware" class="md-nav__link">
+    2.1 What needs to be done for connecting to SSM Middleware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-subscription-process" class="md-nav__link">
+    3. Subscription Process
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Subscription Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-agency-profile" class="md-nav__link">
+    3.1 Agency Profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-service-catalog-service-subscription" class="md-nav__link">
+    3.2 Service Catalog – Service Subscription
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-endpoint-url" class="md-nav__link">
+    3.3 ENDPOINT URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-message-format" class="md-nav__link">
+    3.4 Message Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-header-fields" class="md-nav__link">
+    Message Header Fields
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-http-header-token-authentication" class="md-nav__link">
+    4. HTTP Header - Token Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="4. HTTP Header - Token Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-java-library-for-generating-username-token" class="md-nav__link">
+    4.1 Java library for generating username token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-net-library-for-generating-username-token" class="md-nav__link">
+    4.2 .NET library for generating username token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-transport-protocol-https" class="md-nav__link">
+    5. Transport Protocol - HTTPS
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How%20To%20Call%20API/Token%20Authentication/" class="md-nav__link">
+        Token Authentication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Data Schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Schema" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Schema
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Schema/Data%20Schema%20LLP/" class="md-nav__link">
+        Data Schema LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Schema/Data%20Schema%20ROB/" class="md-nav__link">
+        Data Schema ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Schema/Data%20Schema%20ROC/" class="md-nav__link">
+        Data Schema ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Profile Webservice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Profile Webservice" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Profile Webservice
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Data Mapping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Mapping" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Data Mapping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/Data%20Mapping/LLP/Data%20Mapping%20LLP/" class="md-nav__link">
+        Data Mapping LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/Data%20Mapping/ROB/Data%20Mapping%20ROB/" class="md-nav__link">
+        Data Mapping ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/Data%20Mapping/ROC/Data%20Mapping%20ROC/" class="md-nav__link">
+        Data Mapping ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/Error%20Message/Error%20Message/" class="md-nav__link">
+        Exception Handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Sample Report
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sample Report" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sample Report
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/Sample%20Report/LLP/Sample%20Report%20LLP/" class="md-nav__link">
+        Sample Report LLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/Sample%20Report/ROB/Sample%20Report%20ROB/" class="md-nav__link">
+        Sample Report ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/Sample%20Report/ROC/Sample%20Report%20ROC/" class="md-nav__link">
+        Sample Report ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/WSDL%20File/WSDL%20File/" class="md-nav__link">
+        WSDL File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/getBizProfile/getBizProfile/" class="md-nav__link">
+        getBizProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/getCompProfile/getCompProfile/" class="md-nav__link">
+        getCompProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          getInfoProfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="getInfoProfile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          getInfoProfile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/getInfoProfile/getInfoProfileROB/" class="md-nav__link">
+        getInfoProfile ROB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/getInfoProfile/getInfoProfileROC/" class="md-nav__link">
+        getInfoProfile ROC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/getLlpCurrentProfile/getLlpCurrentProfile/" class="md-nav__link">
+        getLlpCurrentProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile%20Webservice/getNewFormatEntityNo/getNewFormatEntityNo/" class="md-nav__link">
+        getNewFormatEntityNo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-glosary" class="md-nav__link">
+    1. Glosary
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Glosary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-1-glossary-table" class="md-nav__link">
+    Table 1 : Glossary Table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ssm-middleware" class="md-nav__link">
+    2. SSM Middleware
+  </a>
+  
+    <nav class="md-nav" aria-label="2. SSM Middleware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-what-needs-to-be-done-for-connecting-to-ssm-middleware" class="md-nav__link">
+    2.1 What needs to be done for connecting to SSM Middleware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-subscription-process" class="md-nav__link">
+    3. Subscription Process
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Subscription Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-agency-profile" class="md-nav__link">
+    3.1 Agency Profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-service-catalog-service-subscription" class="md-nav__link">
+    3.2 Service Catalog – Service Subscription
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-endpoint-url" class="md-nav__link">
+    3.3 ENDPOINT URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-message-format" class="md-nav__link">
+    3.4 Message Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-header-fields" class="md-nav__link">
+    Message Header Fields
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-http-header-token-authentication" class="md-nav__link">
+    4. HTTP Header - Token Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="4. HTTP Header - Token Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-java-library-for-generating-username-token" class="md-nav__link">
+    4.1 Java library for generating username token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-net-library-for-generating-username-token" class="md-nav__link">
+    4.2 .NET library for generating username token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-transport-protocol-https" class="md-nav__link">
+    5. Transport Protocol - HTTPS
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h1>
+<h2 id="1-glosary">1. Glosary<a class="headerlink" href="#1-glosary" title="Permanent link">#</a></h2>
+<p>The following specify terms and abbreviations used in this document and their definitions that are needed to understand this document.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Abbreviations</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">SSM</td>
+<td>Suruhanjaya Syarikat Malaysia</td>
+</tr>
+<tr>
+<td align="left">MB</td>
+<td>Mesiniaga Berhad</td>
+</tr>
+<tr>
+<td align="left">Hash</td>
+<td>Hash is a one way function -it cannot be decrypted back.</td>
+</tr>
+<tr>
+<td align="left">SHA</td>
+<td>Secure Hash Algorithmis one of a number of cryptographic hash functions.</td>
+</tr>
+<tr>
+<td align="left">SHA256</td>
+<td>SHA-256 variant of SHA algorithm generates an almost-unique, fixed size 256-bit(32-byte) hash.</td>
+</tr>
+<tr>
+<td align="left">Base64</td>
+<td>A group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="table-1-glossary-table">Table 1 : Glossary Table<a class="headerlink" href="#table-1-glossary-table" title="Permanent link">#</a></h4>
+<h2 id="2-ssm-middleware">2. SSM Middleware<a class="headerlink" href="#2-ssm-middleware" title="Permanent link">#</a></h2>
+<p>This  document  describes  the  interface  standard  for  integrating  to  SSM  Middleware.  It  covers  the  transport protocol, web service standard and subscription requirement. As illustrstrated below, there are   few   security   configurations   and   settings   need   to   be implemented   to   ensure   secure   communication between servie requestor and service provider. </p>
+<h4 id="_1"><img alt="" src="../src/Figure%201.png" /><a class="headerlink" href="#_1" title="Permanent link">#</a></h4>
+<h3 id="21-what-needs-to-be-done-for-connecting-to-ssm-middleware">2.1 What needs to be done for connecting to SSM Middleware<a class="headerlink" href="#21-what-needs-to-be-done-for-connecting-to-ssm-middleware" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Service Requestor (i.e. Agency) need an account in Middleware System. <br>Please refer to <a href="#31-agency-profile">3.1</a></td>
+<td>Liaosn with SSM Business Development team to have an account in the SSM Middleware. Login credential, username &amp; password, will be sent to respective Service Requestor once the service requestor account is created.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Service Requestor is required to subscribe the services from the Service Catalog. <br> Please refer to 0</td>
+<td>Service Requestor login to system by using the login credential provided by the SSM.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Modifythe application for calling requeird services. <br>Please refer to <a href="#4-http-header-token-authentication">4</a> for username token implementation</td>
+<td>- Perform wsdl URL call to SSM Middleware to extract the webservice signature (WSDL). <br> - Develop soap message as per the SSM Middleware soap message standard. <br> - Inlcude HTTP Server username token as per SSM Middleware standard.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Service Requestor application requires to connect SSM Middleware through HTTPS.</td>
+<td>HTTPS will be implemented in SSM Middleware.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-subscription-process">3. Subscription Process<a class="headerlink" href="#3-subscription-process" title="Permanent link">#</a></h2>
+<h4 id="_2"><img alt="" src="../src/Figure%202.png" /><a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
+<ul>
+<li>Each Service Requestor / Agency is required to register an account in SSM Middleware before it can connect to Middleware.</li>
+<li>Username and password will be sent to Service Requestor via email once the account is created.</li>
+<li>Service Requestor subscribes to the services by using the provided username and password. </li>
+<li>The service subscription is required approval from SSM. Once the subscription is approved, Service Requestor is able to connect the SSM Middleware as long as the request message compliance to interface message format.</li>
+</ul>
+<h3 id="31-agency-profile">3.1 Agency Profile<a class="headerlink" href="#31-agency-profile" title="Permanent link">#</a></h3>
+<p>a. SSM MBDD need to create an account in Middleware for agency.<br>
+b. Once agency profile is created, a notification email will be sent to the agency.<br>
+c. Email content include the admin user details.<br>
+<img alt="" src="../src/UserID.png" /><br>
+d. After that, you can use username and password to login the system.<br>
+<img alt="" src="../src/login.png" /><br>
+e. Once login success will go to landing page.<br>
+<img alt="" src="../src/landingPage.png" /></p>
+<h3 id="32-service-catalog-service-subscription">3.2 Service Catalog – Service Subscription<a class="headerlink" href="#32-service-catalog-service-subscription" title="Permanent link">#</a></h3>
+<p>a. Login into the  system<br>
+<img alt="" src="../src/login.png" /><br></p>
+<p>b. Select the Subscription screen<br>
+<img alt="" src="../src/SubscriptionScreen.png" /><br></p>
+<p>c. Subscription New Service<br>
+<img alt="" src="../src/SubscriptionService.png" /><br></p>
+<p>d. Select the service category to subscribe<br>
+<img alt="" src="../src/ServiceCatalog.png" /><br></p>
+<p>e. Once confirm click on the “save” button<br>
+<img alt="" src="../src/ConfirmationPage.png" /><br></p>
+<p>f. After click subscribe button will pending SSM approval to approve it.<br>
+g. Receive email when the service category approved.<br>
+<img alt="" src="../src/ApprovedEmail.png" /></p>
+<h3 id="33-endpoint-url">3.3 ENDPOINT URL<a class="headerlink" href="#33-endpoint-url" title="Permanent link">#</a></h3>
+<p>You can view the endpoint URLs for your subscribed service catalogs in the integrasi portal. They look similar to the samples below.<br><br>
+Production URL:<br>
+https://integrasi.ssm.com.my/{Service Catalog Name}/{version no}<br><br>
+Testing URL:<br>
+https://integrasi.ssm.com.my/testing/{Service Catalog Name}/{version no}<br><br>
+Example:<br>
+https://integrasi.ssm.com.my/BusinessService/1</p>
+<h3 id="34-message-format">3.4 Message Format<a class="headerlink" href="#34-message-format" title="Permanent link">#</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Sample Request Message</label><label for="__tabbed_1_2">Good Response Message</label><label for="__tabbed_1_3">Error Response Message</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;soapenv:Envelope</span> <span class="na">xmlns:soapenv=</span><span class="s">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;soapenv:Header/&gt;</span>
+    <span class="nt">&lt;soapenv:Body&gt;</span>
+        <span class="nt">&lt;rob:FindBusinessByBrNo</span> <span class="na">xmlns:rob=</span><span class="s">&quot;urn:ssm/rob&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;header&gt;</span>
+            <span class="nt">&lt;/header&gt;</span>
+                <span class="nt">&lt;customerId&gt;</span>AGENCY<span class="nt">&lt;/customerId&gt;</span>
+                <span class="nt">&lt;customerReferenceNo&gt;</span>1234<span class="nt">&lt;/customerReferenceNo&gt;</span>
+                <span class="nt">&lt;customerTransactionDate&gt;</span>2016-08-09T16:00:00.000Z<span class="nt">&lt;/customerTransactionDate&gt;</span>
+            <span class="nt">&lt;request&gt;</span>
+                <span class="nt">&lt;brNo&gt;</span>001234567<span class="nt">&lt;/brNo&gt;</span>
+                <span class="nt">&lt;agencyBranchCode&gt;</span>KL<span class="nt">&lt;/agencyBranchCode&gt;</span>
+            <span class="nt">&lt;/request&gt;</span>
+        <span class="nt">&lt;/rob:FindBusinessByBrNo&gt;</span>
+    <span class="nt">&lt;/soapEnv:Body&gt;</span>
+<span class="nt">&lt;/soapEnv:Envelope&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;soapenv:Envelope</span> <span class="na">xmlns:soapenv=</span><span class="s">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;soapenv:Header/&gt;</span>
+    <span class="nt">&lt;soapenv:Body&gt;</span>
+        <span class="nt">&lt;rob:FindBusinesByBrNoResponse</span> <span class="na">xmlns:rob=</span><span class="s">&quot;urn:ssm/rob&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;header&gt;</span>
+                <span class="nt">&lt;customerId&gt;</span>AGENCY<span class="nt">&lt;/customerId&gt;</span>
+                <span class="nt">&lt;customerReferenceNo&gt;</span>1234<span class="nt">&lt;/customerReferenceNo&gt;</span>
+                <span class="nt">&lt;customerTransactionDate&gt;</span>2016-08-09T16:00:00.000Z<span class="nt">&lt;/customerTransactionDate&gt;</span>
+                <span class="nt">&lt;serviceCode&gt;</span>CBS00002<span class="nt">&lt;/serviceCode&gt;</span>
+                <span class="nt">&lt;versionNumber&gt;</span>1<span class="nt">&lt;/versionNumber&gt;</span>
+                <span class="nt">&lt;errorCode/&gt;</span>
+                <span class="nt">&lt;errorMessage/&gt;</span>
+                <span class="nt">&lt;recordCount&gt;</span>1<span class="nt">&lt;/recordCount&gt;</span>
+                <span class="nt">&lt;requestTimestamp&gt;</span>2016-08-09T16:00:00.123Z<span class="nt">&lt;/requestTimestamp&gt;</span>
+                <span class="nt">&lt;responseTimestamp&gt;</span>2016-08-09T16:00:00.567Z<span class="nt">&lt;/responseTimestamp&gt;</span>
+                <span class="nt">&lt;hostReferenceNo/&gt;</span>
+                <span class="nt">&lt;hostStatusCode/&gt;</span>
+                <span class="nt">&lt;hostStatusMessage/&gt;</span>
+            <span class="nt">&lt;/header&gt;</span>
+            <span class="nt">&lt;request&gt;</span>
+                <span class="nt">&lt;brNo&gt;</span>001234567<span class="nt">&lt;/brNo&gt;</span>
+                <span class="nt">&lt;agencyBranchCode&gt;</span>KL<span class="nt">&lt;/agencyBranchCode&gt;</span>
+            <span class="nt">&lt;/request&gt;</span>
+            <span class="nt">&lt;response&gt;</span>
+                <span class="nt">&lt;businessInfoList&gt;</span>
+                    <span class="nt">&lt;businessInfo&gt;</span>
+                        <span class="nt">&lt;businessName&gt;</span>...<span class="nt">&lt;/businessName&gt;</span>
+                        ...
+                    <span class="nt">&lt;/businessInfo&gt;</span>
+            <span class="nt">&lt;/response&gt;</span>
+        <span class="nt">&lt;/rob:FindBusinessByBrNoResponse&gt;</span>
+    <span class="nt">&lt;/soapenv:Body&gt;</span>
+<span class="nt">&lt;/soapenv:Envelope&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;soapenv:Envelope</span> <span class="na">xmlns:soapenv=</span><span class="s">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span><span class="nt">&gt;&lt;soapenv:Header/&gt;</span>
+    <span class="nt">&lt;soapenv:Body&gt;</span>
+        <span class="nt">&lt;rob:FindBusinesByBrNoResponse</span> <span class="na">xmlns:rob=</span><span class="s">&quot;urn:ssm/rob&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;header&gt;</span>
+                <span class="nt">&lt;customerId&gt;</span>AGENCY<span class="nt">&lt;/customerId&gt;</span>
+                <span class="nt">&lt;customerReferenceNo&gt;</span>1234<span class="nt">&lt;/customerReferenceNo&gt;</span>
+                <span class="nt">&lt;customerTransactionDate&gt;</span>2016-08-09T16:00:00.000Z<span class="nt">&lt;/customerTransactionDate&gt;</span>
+                <span class="nt">&lt;serviceCode&gt;</span>CBS00002<span class="nt">&lt;/serviceCode&gt;</span>
+                <span class="nt">&lt;versionNumber&gt;</span>1<span class="nt">&lt;/versionNumber&gt;</span>
+                <span class="nt">&lt;errorCode&gt;</span>ESB00002<span class="nt">&lt;/errorCode&gt;</span>
+                <span class="nt">&lt;errorMessage&gt;</span>Host Time-out<span class="nt">&lt;/errorMessage&gt;</span>
+                <span class="nt">&lt;recordCount&gt;</span>0<span class="nt">&lt;/recordCount&gt;</span>
+                <span class="nt">&lt;requestTimestamp&gt;</span>2016-08-09T16:00:00.123Z<span class="nt">&lt;/requestTimestamp&gt;</span>
+                <span class="nt">&lt;responseTimestamp&gt;</span>2016-08-09T16:00:35.567Z<span class="nt">&lt;/responseTimestamp&gt;</span>
+                <span class="nt">&lt;esbHost&gt;</span>mwmbp01.ssm.com.my<span class="nt">&lt;/esbHost&gt;</span>
+                <span class="nt">&lt;hostReferenceNo/&gt;</span>
+                <span class="nt">&lt;hostStatusCode/&gt;</span>
+                <span class="nt">&lt;hostStatusMessage/&gt;</span>
+            <span class="nt">&lt;/header&gt;</span>
+            <span class="nt">&lt;request&gt;</span>
+                <span class="nt">&lt;brNo&gt;</span>001234567<span class="nt">&lt;/brNo&gt;</span>
+                <span class="nt">&lt;agencyBranchCode&gt;</span>KL<span class="nt">&lt;/agencyBranchCode&gt;</span>
+            <span class="nt">&lt;/request&gt;</span>
+        <span class="nt">&lt;/rob:FindBusinessByBrNoResponse&gt;</span>
+    <span class="nt">&lt;/soapenv:Body&gt;</span>
+<span class="nt">&lt;/soapenv:Envelope&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="message-header-fields"><strong>Message Header Fields</strong><a class="headerlink" href="#message-header-fields" title="Permanent link">#</a></h3>
+<table>
+    <thead>
+        <tr>
+            <th colspan=5>Request Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>Name</td>
+            <td>Type</td>
+            <td>Length</td>
+            <td>Remarks</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>VersionNumber</td>
+            <td>CHAR</td>
+            <td>3</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>serviceCode</td>
+            <td>CHAR</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>customerID</td>
+            <td>CHAR</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>customerReferenceNo</td>
+            <td>CHAR</td>
+            <td>40</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>customerRequestDate</td>
+            <td>CHAR</td>
+            <td></td>
+            <td>yyyy'-'MM'-'dd'T'hh':'mm':'ss'.'SSS</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr />
+<table>
+    <thead>
+        <tr>
+            <th colspan=5>ResponeHeader</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>Name</td>
+            <td>Type</td>
+            <td>Length</td>
+            <td>Remarks</td>
+        </tr>
+        <tr>
+            <td>1-5</td>
+            <td>Fields 1-5 will repeat from request</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>serverHost</td>
+            <td>CHAR</td>
+            <td>30</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>requestTimestamp</td>
+            <td>CHAR</td>
+            <td></td>
+            <td>yyyy'-'MM'-'dd'T'hh':'mm':'ss'.'SSS</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>responseTimestamp</td>
+            <td>CHAR</td>
+            <td></td>
+            <td>yyyy'-'MM'-'dd'T'hh':'mm':'ss'.'SSS</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>recordCount</td>
+            <td>INT</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>errorCode</td>
+            <td>CHAR</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>errorMessage</td>
+            <td>CHAR</td>
+            <td>100</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>hostErrorCode</td>
+            <td>CHAR</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>hostErrorMessage</td>
+            <td>CHAR</td>
+            <td>100</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="4-http-header-token-authentication">4. HTTP Header - Token Authentication<a class="headerlink" href="#4-http-header-token-authentication" title="Permanent link">#</a></h2>
+<p>A  method  for  a  Service  Requestor  to  provide  a  user  name  and  timestamp  when  making  a  service request to Middleware. When a Service Provider wants to send the server authentication credentials it may use the Authorization field. Authorization field will be put on the Header of request.<br></p>
+<p>Token Authentication have two step to produce Authorization field.<br>
+<strong>A. The digest is constructed as follows:</strong><br></p>
+<ol>
+<li>
+<p>The username, timestamp and password are combined with a vertical bar. Because timestamp will be included on the concatString = username|timestamp|password</p>
+</li>
+<li>
+<p>The resulting string is hashed using SHA256.hashByte = SHA256(concatString)</p>
+</li>
+</ol>
+<p>Example:</p>
+<ol>
+<li>
+<p>Username: Tester, timestamp: 2016-05-31 11:39:35, digest: AAmsv8KNchbMY4GHViINjp/B4OVraiEdUZccaojqGhA=Tester|2016-05-31 11:39:35|AAmsv8KNchbMY4GHViINjp/B4OVraiEdUZccaojqGhA=</p>
+</li>
+<li>
+<p>Base64.encode(username|timestamp|digest) VGVzdGVyfDIwMTYtMDUtMzEgMTE6Mzk6MzV8QUFtc3Y4S05jaGJNWTRHSFZpSU5qcC9CNE9WcmFpRWRVWmNjYW9qcUdoQT0=</p>
+</li>
+<li>
+<p>Authorization: VGVzdGVyfDIwMTYtMDUtMzEgMTE6Mzk6MzV8QUFtc3Y4S05jaGJNWTRHSFZpSU5qcC9CNE9WcmFpRWRVWmNjYW9qcUdoQT0=</p>
+</li>
+</ol>
+<h3 id="41-java-library-for-generating-username-token">4.1 Java library for generating username token<a class="headerlink" href="#41-java-library-for-generating-username-token" title="Permanent link">#</a></h3>
+<p><img alt="" src="../src/java%20version%20dot%20zip.png" /></p>
+<h3 id="42-net-library-for-generating-username-token">4.2 .NET library for generating username token<a class="headerlink" href="#42-net-library-for-generating-username-token" title="Permanent link">#</a></h3>
+<p><img alt="" src="../src/AuthToken.NET.png" /></p>
+<h2 id="5-transport-protocol-https">5. Transport Protocol - HTTPS<a class="headerlink" href="#5-transport-protocol-https" title="Permanent link">#</a></h2>
+<p>HTTPS  is  a protocol for secure communication  over  a computer  network which  is  widely  used  on  the Internet.   HTTPS   consists   of   communication   over Hypertext   Transfer   Protocol (HTTP)   within   a   connection encrypted by <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security or its predecessor</a>, Secure Sockets Layer. The main motivation for HTTPS is <a href="https://en.wikipedia.org/wiki/Authentication">authentication</a> of the  visited website and protection of the privacy and integrity of the exchanged data. [1] </p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../How%20To%20Call%20API/Token%20Authentication/" class="md-footer__link md-footer__link--next" aria-label="Next: Token Authentication" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Token Authentication
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "content.code.annotate", "content.tabs.link"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
